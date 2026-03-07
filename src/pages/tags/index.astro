@@ -30,7 +30,7 @@ const sortedTags = [...tagCounts.entries()].sort((a, b) =>
     {sortedTags.map(([tag, count]) => (
       <a
         href={`/tags/${tag}`}
-        class="group inline-flex items-center gap-2 rounded-md bg-[var(--color-surface-alt)] px-4 py-2 text-sm font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-primary-50)] hover:text-[var(--color-primary-600)] dark:hover:bg-[var(--color-primary-900)]/30 dark:hover:text-[var(--color-primary-400)] transition-colors"
+        class="group inline-flex items-center gap-2 rounded-full border border-[var(--color-surface-border)] bg-[var(--color-surface-alt)] px-4 py-2 text-sm font-medium text-[var(--color-text-primary)] hover:border-[var(--color-primary-500)]/50 hover:text-[var(--color-primary-400)] hover:shadow-sm transition-all"
       >
         {tag}
         <span class="text-xs text-[var(--color-text-muted)] group-hover:text-[var(--color-primary-500)] transition-colors">

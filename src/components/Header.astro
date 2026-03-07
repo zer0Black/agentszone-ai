@@ -5,38 +5,87 @@ const navLinks = [
   { href: '/articles', label: '文章' },
   { href: '/authors', label: '作者' },
   { href: '/tags', label: '话题' },
+  { href: '/events', label: '活动' },
   { href: 'https://magong.se/', label: 'MaGong', external: true },
 ];
 
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-50 border-b border-[var(--color-surface-border)] bg-[var(--color-surface)]/80 backdrop-blur-xl">
+<header class="sticky top-0 z-50 glass">
   <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 sm:px-8 py-4">
     <a href="/" class="flex items-center gap-2.5 transition-opacity hover:opacity-80">
-      <div class="flex h-7 w-7 items-center justify-center rounded-md bg-[var(--color-primary-600)] text-xs font-bold text-white">
+      <div class="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-[var(--color-primary-500)] to-purple-500 text-xs font-bold text-white shadow-md shadow-[var(--color-primary-500)]/25">
         A
       </div>
       <span class="text-lg font-bold tracking-tight text-[var(--color-text-primary)]">
-        Agents 特区
+        Agents <span class="text-gradient">特区</span>
       </span>
     </a>
-    <div class="flex items-center gap-8">
+
+    <!-- Mobile hamburger -->
+    <button
+      id="mobile-menu-toggle"
+      type="button"
+      class="flex sm:hidden rounded-md p-2 text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-elevated)] transition-colors"
+      aria-label="Toggle menu"
+    >
+      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+
+    <!-- Desktop nav -->
+    <div class="hidden sm:flex items-center gap-1">
       {navLinks.map(({ href, label, external }) => (
         <a
           href={href}
           {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
           class:list={[
-            'text-sm font-medium transition-colors',
+            'rounded-md px-3 py-1.5 text-sm font-medium transition-colors',
             !external && currentPath.startsWith(href)
-              ? 'text-[var(--color-text-primary)]'
-              : 'text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]',
+              ? 'text-[var(--color-text-primary)] bg-[var(--color-surface-elevated)]'
+              : 'text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-elevated)]',
           ]}
         >
           {label}{external && <span class="ml-0.5 inline-block translate-y-[-1px] text-[10px] opacity-50">&#8599;</span>}
         </a>
       ))}
-      <ThemeToggle />
+      <div class="ml-2">
+        <ThemeToggle />
+      </div>
     </div>
   </nav>
+
+  <!-- Mobile nav -->
+  <div id="mobile-menu" class="hidden sm:hidden border-t border-[var(--color-surface-border)] px-6 pb-4">
+    <div class="flex flex-col gap-1 pt-2">
+      {navLinks.map(({ href, label, external }) => (
+        <a
+          href={href}
+          {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+          class:list={[
+            'rounded-md px-3 py-2 text-sm font-medium transition-colors',
+            !external && currentPath.startsWith(href)
+              ? 'text-[var(--color-text-primary)] bg-[var(--color-surface-elevated)]'
+              : 'text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-elevated)]',
+          ]}
+        >
+          {label}{external && <span class="ml-0.5 inline-block translate-y-[-1px] text-[10px] opacity-50">&#8599;</span>}
+        </a>
+      ))}
+      <div class="px-3 pt-2">
+        <ThemeToggle />
+      </div>
+    </div>
+  </div>
+
+  <div class="gradient-line"></div>
 </header>
+
+<script>
+  document.getElementById('mobile-menu-toggle')?.addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu');
+    menu?.classList.toggle('hidden');
+  });
+</script>

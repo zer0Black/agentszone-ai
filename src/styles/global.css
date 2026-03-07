@@ -12,26 +12,78 @@
   --color-primary-800: #3730a3;
   --color-primary-900: #312e81;
 
+  --color-accent-start: #818cf8;
+  --color-accent-end: #c084fc;
+
   --color-surface: #ffffff;
   --color-surface-alt: #f8fafc;
   --color-surface-elevated: #ffffff;
   --color-surface-border: #e2e8f0;
+  --color-surface-glass: rgba(255, 255, 255, 0.6);
   --color-text-primary: #0f172a;
   --color-text-secondary: #475569;
   --color-text-muted: #94a3b8;
+
+  --shadow-glow-primary: 0 0 20px rgba(99, 102, 241, 0.15);
+  --shadow-glow-accent: 0 0 30px rgba(129, 140, 248, 0.1), 0 0 60px rgba(192, 132, 252, 0.05);
 
   --font-sans: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
 .dark {
-  --color-surface: #0a0a0f;
-  --color-surface-alt: #12121a;
-  --color-surface-elevated: #1a1a2e;
-  --color-surface-border: #1e1e2e;
+  --color-surface: #09090b;
+  --color-surface-alt: #111113;
+  --color-surface-elevated: #18181b;
+  --color-surface-border: #27272a;
+  --color-surface-glass: rgba(17, 17, 19, 0.7);
   --color-text-primary: #f1f5f9;
-  --color-text-secondary: #cbd5e1;
+  --color-text-secondary: #a1a1aa;
   --color-text-muted: #64748b;
+
+  --shadow-glow-primary: 0 0 20px rgba(99, 102, 241, 0.25);
+  --shadow-glow-accent: 0 0 30px rgba(129, 140, 248, 0.15), 0 0 60px rgba(192, 132, 252, 0.08);
+}
+
+/* Utility: gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-accent-start), var(--color-accent-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hover gradient text within group */
+.hover-text-gradient {
+  transition: all 0.3s ease;
+}
+.group:hover .hover-text-gradient {
+  background: linear-gradient(135deg, var(--color-accent-start), var(--color-accent-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Utility: glassmorphism */
+.glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: var(--color-surface-glass);
+  border: 1px solid var(--color-surface-border);
+}
+
+/* Utility: glow on hover */
+.glow-hover {
+  transition: box-shadow 0.3s ease;
+}
+.glow-hover:hover {
+  box-shadow: var(--shadow-glow-primary);
+}
+
+/* Utility: gradient line */
+.gradient-line {
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent-start), var(--color-accent-end), transparent);
 }
 
 html {
@@ -45,13 +97,13 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-primary-200);
-  color: var(--color-primary-900);
+  background-color: rgba(129, 140, 248, 0.3);
+  color: var(--color-text-primary);
 }
 
 .dark ::selection {
-  background-color: var(--color-primary-900);
-  color: var(--color-primary-200);
+  background-color: rgba(129, 140, 248, 0.3);
+  color: var(--color-text-primary);
 }
 
 *:focus-visible {

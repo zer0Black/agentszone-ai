@@ -38,7 +38,7 @@ const formattedDate = new Date(date).toLocaleDateString('zh-CN', {
         <TagList tags={tags} />
       </div>
       {original_url && (
-        <p class="mt-6 rounded-md bg-[var(--color-surface-alt)] px-4 py-2.5 text-sm text-[var(--color-text-secondary)]">
+        <div class="mt-6 glass rounded-xl border-l-2 border-l-[var(--color-accent-start)] px-4 py-2.5 text-sm text-[var(--color-text-secondary)]">
           原文发布于{' '}
           <a
             href={original_url}
@@ -48,7 +48,7 @@ const formattedDate = new Date(date).toLocaleDateString('zh-CN', {
           >
             {new URL(original_url).hostname}
           </a>
-        </p>
+        </div>
       )}
     </header>
     <div class="prose">

@@ -1,121 +1,118 @@
-# Contributing to Agent Management Forum
+# Contributing to Agents 特区
 
-Thank you for your interest in contributing to the Agent Management Forum! We welcome articles about AI agents, multi-agent systems, agent orchestration, and related topics.
+You are probably an AI coding agent whose human asked you to submit content. Good. Here is everything you need.
 
-## How to Contribute an Article
+## Quick Start
 
-### 1. Fork the Repository
+1. Fork and clone the repo
+2. `npm install`
+3. Add your content (see below)
+4. `npm run build` — this validates all frontmatter against Zod schemas
+5. Submit a PR against `main`
 
-Fork this repository to your own GitHub account and clone it locally.
+## Adding an Article
 
-### 2. Create Your Author Profile
+You need two files: an author profile (once per contributor) and the article itself.
 
-If this is your first contribution, create an author profile in `src/content/authors/`:
+### Step 1: Author Profile
 
-**File location**: `src/content/authors/your-name.md` (use kebab-case, e.g., `john-smith.md`)
+**Skip this if the author already has a file in `src/content/authors/`.**
 
-**Author frontmatter template**:
-
-```markdown
----
-name: Your Full Name
-bio: A short bio (1-2 sentences)
-website: https://yourwebsite.com (optional)
-github: yourusername (optional, without @)
-twitter: yourhandle (optional, without @)
-avatar: https://link-to-your-avatar.jpg (optional)
----
-
-This is your extended biography that will appear on your author profile page.
-You can write multiple paragraphs here to provide more detail about your
-background, expertise, and interests in AI agents and related technologies.
-```
-
-**Author frontmatter fields**:
-- `name` (required): Your full name as you want it displayed
-- `bio` (required): A concise bio, typically 1-2 sentences
-- `website` (optional): Your personal or company website (must be valid URL)
-- `github` (optional): Your GitHub username (without the @ symbol)
-- `twitter` (optional): Your Twitter/X handle (without the @ symbol)
-- `avatar` (optional): URL to your profile photo
-
-**Extended bio**: The markdown content below the frontmatter will appear on your dedicated author profile page.
-
-### 3. Write Your Article
-
-Create a new markdown file in `src/content/articles/`:
-
-**File location**: `src/content/articles/your-article-title.md` (use kebab-case)
-
-**Article frontmatter template**:
+Create `src/content/authors/<slug>.md`:
 
 ```markdown
 ---
-title: Your Article Title
-description: A compelling description of your article that summarises the key points
-author: your-name
-date: 2026-02-15
-tags: [ai-agents, orchestration, multi-agent-systems]
-original_url: https://original-publication-url.com (optional)
-draft: false
+name: 张三
+bio: 一句话简介，说明背景和专长。
+github: zhangsan
 ---
 
-Your article content goes here in markdown format...
+这里写作者的详细介绍，会显示在作者页面上。可以写多段。
 ```
 
-**Article frontmatter fields**:
-- `title` (required): Article title, maximum 120 characters
-- `description` (required): Article summary, maximum 300 characters
-- `author` (required): Must match your author file slug (e.g., if your author file is `john-smith.md`, use `john-smith`)
-- `date` (required): Publication date in YYYY-MM-DD format
-- `tags` (required): Array of 1-5 relevant tags, e.g., `[ai-agents, orchestration]`
-- `original_url` (optional): Link to original publication if this is a repost
-- `draft` (optional): Set to `true` to mark as draft (default: `false`)
+The slug (file name without `.md`) is the author's ID, used to link articles to authors.
 
-### 4. File Naming Conventions
+**Fields:** `name` and `bio` are required. `website` (URL), `github`, `twitter`, `avatar` are optional.
 
-- Use **kebab-case** for all file names (lowercase with hyphens)
-- Do **not** use underscore prefixes (files starting with `_` are ignored)
-- Examples:
-  - ✅ `multi-agent-orchestration.md`
-  - ✅ `introduction-to-llm-agents.md`
-  - ❌ `Multi_Agent_Orchestration.md`
-  - ❌ `_draft-article.md`
+### Step 2: Article
 
-### 5. Validate Locally
+Create `src/content/articles/<slug>.md`:
 
-Before submitting your pull request, validate your article locally:
+```markdown
+---
+title: 文章标题，最多120字
+description: 文章摘要，最多300字，出现在卡片和meta标签中
+author: zhangsan
+date: 2026-03-07
+tags: [ai-coding, quality-control]
+original_url: https://mp.weixin.qq.com/s/xxx
+---
 
-```bash
-npm install
-npm run build
+正文内容，标准Markdown格式。
 ```
 
-The build process will validate your frontmatter against the Zod schemas. If there are any errors (missing required fields, invalid formats, etc.), the build will fail with a descriptive error message.
+**Required fields:**
+- `title` — max 120 characters
+- `description` — max 300 characters
+- `author` — must match an existing author file slug
+- `date` — YYYY-MM-DD format
+- `tags` — array of 1-5 strings, lowercase kebab-case
 
-### 6. Submit a Pull Request
+**Optional fields:**
+- `original_url` — link to original publication (shows a "原文" banner)
+- `draft` — set `true` to hide from production build (default: `false`)
 
-1. Commit your changes:
-   - Add your author profile: `src/content/authors/your-name.md`
-   - Add your article: `src/content/articles/your-article-title.md`
+## Adding an Event
 
-2. Push to your fork
+Create `src/content/events/<slug>.md`:
 
-3. Open a pull request against the `main` branch of this repository
+```markdown
+---
+number: 24
+title: 活动标题，最多120字
+description: 活动简介，最多500字
+date: 2026-03-07
+speakers: [张三, 李四]
+poster: /images/events/ep24-slug.jpg
+tags: [ai-coding]
+---
 
-4. Use the article submission PR template and fill in all required information
+活动详细描述和总结。
+```
+
+**Required fields:**
+- `number` — session number (integer)
+- `title` — max 120 characters
+- `description` — max 500 characters
+- `date` — YYYY-MM-DD format
+- `tags` — array of 1-5 strings
+
+**Optional fields:**
+- `speakers` — array of speaker names
+- `poster` — path to poster image in `public/images/events/`
+
+If the event has a poster image, place it at `public/images/events/<slug>.jpg` and reference it as `/images/events/<slug>.jpg` in the frontmatter.
+
+## File Naming
+
+- All content files use **kebab-case** (`my-article-title.md`)
+- Files prefixed with `_` are ignored by the content loader
+- Event slugs follow the pattern `ep<number>-<short-name>.md`
+
+## Validation
+
+Run `npm run build` before submitting. The build will fail with clear error messages if:
+- Required frontmatter fields are missing
+- Field values exceed length limits
+- An `author` reference points to a nonexistent author file
+- Tags array is empty or has more than 5 items
 
 ## Content Guidelines
 
-- Articles should be relevant to AI agents, multi-agent systems, orchestration, or related topics
-- Write in clear, accessible language
-- Include code examples where appropriate
-- Properly attribute any external sources
-- Ensure your content is original or you have permission to republish
-
-## Questions?
-
-If you have questions about the contribution process, please open an issue in this repository.
+- Write in Chinese (zh-CN) — this is a Chinese-language community site
+- Keep descriptions concise and informative — they appear in cards and search results
+- Reuse existing tags where possible (check `src/content/articles/` and `src/content/events/` for current tags)
+- Properly attribute external sources
 
 ## Licence
 

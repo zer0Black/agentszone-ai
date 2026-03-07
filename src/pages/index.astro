@@ -13,6 +13,9 @@ const articles = allArticles.sort(
 
 const authors = await getCollection('authors');
 const authorMap = new Map(authors.map((a) => [a.id, a.data.name]));
+
+const featuredArticle = articles[0];
+const remainingArticles = articles.slice(1);
 ---
 
 <BaseLayout
@@ -20,8 +23,17 @@ const authorMap = new Map(authors.map((a) => [a.id, a.data.name]));
   description="一线实践者的AI agent管理经验，从个人探索到组织级实践。"
 >
   <section class="mb-16">
-    <h1 class="text-4xl font-extrabold tracking-tight text-[var(--color-text-primary)] sm:text-5xl lg:text-6xl">
-      Agents 特区
+    <div class="mb-6">
+      <span class="inline-flex items-center gap-2 rounded-full border border-[var(--color-surface-border)] bg-[var(--color-surface-elevated)]/50 px-3.5 py-1.5 text-xs font-medium text-[var(--color-text-muted)]">
+        <span class="relative flex h-2 w-2">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+        </span>
+        AI Agent 实践者社区
+      </span>
+    </div>
+    <h1 class="text-5xl font-extrabold tracking-tight text-[var(--color-text-primary)] sm:text-6xl lg:text-7xl">
+      Agents <span class="text-gradient">特区</span>
     </h1>
     <p class="mt-6 text-lg text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">
       AI agent已经不是实验品了。团队在用agent写代码、做测试、跑部署、处理运维。
@@ -29,22 +41,30 @@ const authorMap = new Map(authors.map((a) => [a.id, a.data.name]));
     <p class="mt-3 text-lg text-[var(--color-text-muted)] leading-relaxed max-w-2xl">
       汇集一线实践者的经验。不谈概念，谈落地。
     </p>
-    <div class="mt-8 h-px w-16 bg-[var(--color-primary-500)]"></div>
+    <div class="mt-8 gradient-line w-24"></div>
   </section>
 
   <section>
     <h2 class="mb-8 text-xs font-semibold uppercase tracking-widest text-[var(--color-text-muted)]">
       最新文章
     </h2>
-    <div class="divide-y divide-[var(--color-surface-border)]">
-      {articles.map((article, index) => (
-        <div class={index === 0 ? 'pb-2' : 'py-2'}>
-          <ArticleCard
-            article={article}
-            authorName={authorMap.get(article.data.author.id) ?? 'Unknown'}
-            featured={index === 0}
-          />
-        </div>
+
+    {featuredArticle && (
+      <div class="mb-4">
+        <ArticleCard
+          article={featuredArticle}
+          authorName={authorMap.get(featuredArticle.data.author.id) ?? 'Unknown'}
+          featured={true}
+        />
+      </div>
+    )}
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {remainingArticles.map((article) => (
+        <ArticleCard
+          article={article}
+          authorName={authorMap.get(article.data.author.id) ?? 'Unknown'}
+        />
       ))}
     </div>
   </section>

@@ -26,4 +26,17 @@ const articles = defineCollection({
   }),
 });
 
-export const collections = { articles, authors };
+const events = defineCollection({
+  loader: glob({ pattern: '[^_]*.md', base: 'src/content/events' }),
+  schema: z.object({
+    number: z.number(),
+    title: z.string().max(120),
+    description: z.string().max(500),
+    date: z.coerce.date(),
+    speakers: z.array(z.string()).optional(),
+    poster: z.string().optional(),
+    tags: z.array(z.string()).min(1).max(5),
+  }),
+});
+
+export const collections = { articles, authors, events };

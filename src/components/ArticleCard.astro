@@ -20,12 +20,17 @@ const formattedDate = new Date(date).toLocaleDateString('zh-CN', {
 
 <article
   class:list={[
-    'group rounded-lg px-6 py-5 transition-colors',
+    'group relative rounded-xl border border-[var(--color-surface-border)] px-6 py-5 transition-all glow-hover',
     featured
-      ? 'bg-[var(--color-surface-alt)] border border-[var(--color-surface-border)]'
-      : 'hover:bg-[var(--color-surface-alt)]',
+      ? 'glass'
+      : 'bg-[var(--color-surface-elevated)]/50',
   ]}
 >
+  <!-- Hover arrow -->
+  <svg class="absolute right-4 top-4 h-4 w-4 text-[var(--color-text-muted)] opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+  </svg>
+
   <div class="mb-2 flex flex-wrap items-center gap-2 text-xs text-[var(--color-text-muted)]">
     <a
       href={`/authors/${author.id}`}
@@ -39,11 +44,11 @@ const formattedDate = new Date(date).toLocaleDateString('zh-CN', {
   <a href={`/articles/${article.id}`} class="block">
     <h2
       class:list={[
-        'font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-primary-600)] dark:group-hover:text-[var(--color-primary-400)] transition-colors',
+        'font-semibold text-[var(--color-text-primary)] transition-all',
         featured ? 'text-2xl tracking-tight' : 'text-lg',
       ]}
     >
-      {title}
+      <span class="hover-text-gradient">{title}</span>
     </h2>
   </a>
   <p class="mt-2 text-sm text-[var(--color-text-secondary)] leading-relaxed">{description}</p>
