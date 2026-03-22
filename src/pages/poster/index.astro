@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PosterGenerator from '../../components/poster/PosterGenerator';
+---
+
+<BaseLayout title="海报生成器 - Agents 特区" description="为 Agents特区论坛 活动生成海报">
+  <div class="max-w-7xl mx-auto">
+    <PosterGenerator client:load lang="zh" />
+  </div>
+</BaseLayout>
+
+<style>
+  .max-w-7xl {
+    max-width: 80rem;
+  }
+</style>

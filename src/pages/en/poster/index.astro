@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PosterGenerator from '../../../components/poster/PosterGenerator';
+---
+
+<BaseLayout title="Poster Generator - AgentsZone" description="Generate posters for Agents Zone Forum events">
+  <div class="max-w-7xl mx-auto">
+    <PosterGenerator client:load lang="en" />
+  </div>
+</BaseLayout>
+
+<style>
+  .max-w-7xl {
+    max-width: 80rem;
+  }
+</style>

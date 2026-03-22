@@ -11,9 +11,15 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^5.0.1",
     "@astrojs/rss": "^4.0.0",
     "@astrojs/sitemap": "^3.0.0",
-    "astro": "^5.17.1"
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.17.1",
+    "html-to-image": "^1.11.13",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
