@@ -25,7 +25,7 @@ pnpm-debug.log*
 .idea/
 
 # claude code
-.claude/
+.claude/settings.local.json
 .opencode/
 
 package-lock.json
