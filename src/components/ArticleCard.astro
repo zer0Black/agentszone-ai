@@ -1,14 +1,12 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import TagList from './TagList.astro';
 
 interface Props {
   article: CollectionEntry<'articles'>;
   authorName: string;
-  featured?: boolean;
 }
 
-const { article, authorName, featured = false } = Astro.props;
+const { article, authorName } = Astro.props;
 const { title, description, date, tags, author } = article.data;
 
 const formattedDate = new Date(date).toLocaleDateString('zh-CN', {
@@ -18,41 +16,36 @@ const formattedDate = new Date(date).toLocaleDateString('zh-CN', {
 });
 ---
 
-<article
-  class:list={[
-    'group relative rounded-xl border border-[var(--color-surface-border)] px-6 py-5 transition-all glow-hover',
-    featured
-      ? 'glass'
-      : 'bg-[var(--color-surface-elevated)]/50',
-  ]}
->
-  <!-- Hover arrow -->
-  <svg class="absolute right-4 top-4 h-4 w-4 text-[var(--color-text-muted)] opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-  </svg>
-
-  <div class="mb-2 flex flex-wrap items-center gap-2 text-xs text-[var(--color-text-muted)]">
+<article class="group py-6 border-b border-[var(--color-surface-border)]">
+  <div class="flex items-baseline gap-2 text-sm text-[var(--color-text-muted)] mb-2">
     <a
       href={`/authors/${author.id}`}
-      class="font-medium hover:text-[var(--color-text-primary)] transition-colors"
+      class="hover:text-[var(--color-accent)] transition-colors"
     >
       {authorName}
     </a>
-    <span>/</span>
+    <span>·</span>
     <time datetime={date.toISOString()}>{formattedDate}</time>
   </div>
-  <a href={`/articles/${article.id}`} class="block">
-    <h2
-      class:list={[
-        'font-semibold text-[var(--color-text-primary)] transition-all',
-        featured ? 'text-2xl tracking-tight' : 'text-lg',
-      ]}
-    >
-      <span class="hover-text-gradient">{title}</span>
-    </h2>
+
+  <a href={`/articles/${article.id}`} class="block group/link">
+    <h3 class="font-serif text-xl sm:text-2xl font-semibold text-[var(--color-text-primary)] group-hover/link:text-[var(--color-accent)] transition-colors leading-snug">
+      {title}
+    </h3>
   </a>
-  <p class="mt-2 text-sm text-[var(--color-text-secondary)] leading-relaxed">{description}</p>
-  <div class="mt-3">
-    <TagList tags={tags} />
+
+  <p class="mt-2 text-[var(--color-text-secondary)] leading-relaxed line-clamp-2">
+    {description}
+  </p>
+
+  <div class="mt-3 flex flex-wrap gap-3">
+    {tags.map((tag) => (
+      <a
+        href={`/tags/${tag}`}
+        class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
+      >
+        #{tag}
+      </a>
+    ))}
   </div>
 </article>
