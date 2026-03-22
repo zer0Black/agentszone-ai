@@ -2,12 +2,12 @@
 
 ## What this project is
 
-Community website for Agents 特区 (agentszone.ai). Most members interact in WeChat groups. The website is the public-facing content hub — articles, author profiles, discussions, and event records.
+Community website for Agents 特区 (agentszone.ai) — the public-facing content hub for a practitioner community focused on AI agent management. Articles, author profiles, discussions, and event records.
 
 ## Community context
 
 - Members are AI practitioners from various industries (finance, healthcare, education, cloud, open source)
-- Primary communication happens in WeChat groups
+- Most members are in WeChat groups where daily conversation happens
 - Regular Saturday evening online meeting via Tencent Meeting (商业版)
   - Meetings can be free or paid
   - Meetings can be internal (members only) or public-facing
