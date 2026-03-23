@@ -1,0 +1,1492 @@
+[
+  {
+    "name": "leo",
+    "mention_count": 28,
+    "at_count": 46,
+    "topic_count": 28,
+    "topics": [
+      "ops-vs-dev-ai",
+      "nick-bmad-share",
+      "xu-document-method",
+      "agent-runtime-branching",
+      "bmad-critique-waterfall",
+      "multiagent-infrastructure",
+      "knowledge-depth-vs-ai",
+      "kuaishou-ai-coding-critique",
+      "org-bottleneck-layoffs",
+      "personal-skills-from-history"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-18",
+    "last_seen": "2026-03-19",
+    "total_quotes": 129,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "我认为是三个，1、升级的时候，让它优化程序或则行为的时候，它改了JSON或则飞书插件，甚至某些群说的，打中了某个BUG（毕竟几十万行代码）导致失联了，你要重新进去修复（有假死和全死之分）2、你在改程序或则什么搞技能的时候，修改了逻辑，导致你之前的技能失效，或则被其他技能给污染和覆盖。因为技能生成不是代码，也是黑盒，你是很难发现因为什么覆盖导致的，最终导致你原来的东西全错了，如果你的技能不是天天用的那种，那么你是不知道为什么失效的，那个时候，可靠技能失效，另一种死，就是虾活着，但已废。3、龙虾自行删库跑路，数据丢失",
+        "weight": 3,
+        "source": "2026-03-10-19-31-openclaw-interaction-paradigm.md",
+        "topic": "openclaw-interaction-paradigm"
+      },
+      {
+        "type": "raw_quote",
+        "text": "我最近的感受也特别强烈，像BMAD，提供了creat-story,validate stroy,dev-story,auotomate-test,code review功能，看上去，五件套，每步都验证，肯定不会遗漏，质量效果会好，但事实上，效果还不如三件套，因为五件套，每步都会修改出一些偏离的方向来，最后就越走越偏",
+        "weight": 3,
+        "source": "2026-02-13-17-43-spec-pipeline-steps.md",
+        "topic": "spec-pipeline-steps"
+      },
+      {
+        "type": "summary_mention",
+        "text": "leo shares that he's gotten organisational buy-in to push AI coding at his securities firm, but faces severe constraints: no Claude Code allowed, must use domestic compute (Huawei 910B + GLM), can only use CodeBuddy, and everything must stay on internal infrastructure",
+        "weight": 2,
+        "source": "2026-02-13-18-46-ai-coding-regulated-firm.md",
+        "topic": "ai-coding-regulated-firm"
+      },
+      {
+        "type": "summary_mention",
+        "text": "The configuration inheritance model (Layer 2 module > Layer 1 code root > Layer 0 workspace; same topic = child overrides, different topics = merge) and the \"Galileo Principle\" (observed reality overrides stored text) are practical frameworks for managing increasingly complex AI coding configuration",
+        "weight": 2,
+        "source": "2026-02-19-19-26-system-prompt-override.md",
+        "topic": "system-prompt-override"
+      },
+      {
+        "type": "summary_mention",
+        "text": "几个值得深入的点：1) 金松说\"不能单靠一种模型\"，在核心业务逻辑区域用三种模型互相review——这是在生产环境下解决AI质量控制的实际方案；2) leo质疑同模型不同工具有何意义，摔跤吧金金解释\"antigravity的风格是很独特的，有时候它能连续给你思考半个小时\"——暗示工具层的编排（orchestration）本身就是差异化的来源；3) 两千多万的节省数字给出了AI coding ROI的具体量级参考",
+        "weight": 2,
+        "source": "2026-02-28-19-10-multi-model-review.md",
+        "topic": "multi-model-review"
+      }
+    ]
+  },
+  {
+    "name": "陈浩",
+    "mention_count": 86,
+    "at_count": 29,
+    "topic_count": 81,
+    "topics": [
+      "ai-agent-manager",
+      "old-engineer-ai-dividend",
+      "agent-runtime-branching",
+      "ai-consulting-cxo",
+      "ai-coding-schools",
+      "api-is-soul",
+      "central-kitchen-agent",
+      "tdd-debate",
+      "waterfall-reborn",
+      "api-as-soul"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-25",
+    "last_seen": "2026-03-20",
+    "total_quotes": 234,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "我启一个话题，看大家有没有兴趣聊聊  AI Coding发展到后面，代码对人类来讲会不会变成一个黑盒？  我们接触的程序都是高级语言，是面向人类设计的，人类又设计了软件设计模式、代码规范之类的代码层面的最佳实践，目标是为了让人类在满足需求的前提下便于维护代码  当我们把Coding、QA、Codereview等工作都交给AI的时候，为了让人类便于维护代码这个目标还是否有必要？  是不是AI开发的结果，只要满足业务功能需求（spec），以及非业务功能需求（比如性能、安全、合规、高可用等）就可以了？  人都可以不用人肉review AI写代码，哪怕他出屎山代码我们也可以不care  那到最后AI ",
+        "weight": 3,
+        "source": "2026-02-07-18-39-code-as-blackbox.md",
+        "topic": "code-as-blackbox"
+      },
+      {
+        "type": "raw_quote",
+        "text": "这个事情的起因就是我在review AI写代码，发现有一些注释不符合代码规范，然后我改进了skill，让他务必遵守一些规范 然后又在考虑，这个事情还有什么必要吗？  我对这个事情的看法 1.长远来看，真没有必要，代码是给AI看的，不是给人看的，AI能看懂，能维护就好 2.以LLM的训练数据来看，他看了太多的优秀代码，在开发规范的理解和遵循上超过大部分人类，我多虑了",
+        "weight": 3,
+        "source": "2026-02-09-19-03-code-standards-ai-era.md",
+        "topic": "code-standards-ai-era"
+      },
+      {
+        "type": "raw_quote",
+        "text": "大家好，我叫陈浩，近20年一线开发经验，架构师，老登，前古法编程大师  ChatGPT发布以来一直关注和学习使用AI工具  从去年下半年开始回归一线Coding工作，最近一两个月开始实践一人开发，给公司做过几个内部提效工具，今年重点是跑通内部工具开发，以及对客户的功能开发  多向群里大佬们学习[Fight]",
+        "weight": 3,
+        "source": "2026-01-25-17-22-old-engineer-ai-dividend.md",
+        "topic": "old-engineer-ai-dividend"
+      },
+      {
+        "type": "summary_mention",
+        "text": "陈浩 demonstrates that a single OpenClaw instance with two agents connected to different IM platforms (Feishu + DingTalk) can route messages between them — effectively using the lobster as a cross-platform chat bridge",
+        "weight": 2,
+        "source": "2026-03-17-18-40-cross-im-routing.md",
+        "topic": "cross-im-routing"
+      },
+      {
+        "type": "summary_mention",
+        "text": ") 谭嘉荣's position is radical — stop thinking in roles, maintain fluidity — while 陈浩 argues PM value is upstream of coding (customer insight, product design) and shouldn't bleed into dev territory",
+        "weight": 2,
+        "source": "2026-02-10-08-39-product-dev-role-collapse.md",
+        "topic": "product-dev-role-collapse"
+      }
+    ]
+  },
+  {
+    "name": "Sayalic",
+    "mention_count": 26,
+    "at_count": 26,
+    "topic_count": 21,
+    "topics": [
+      "chat-archive-open",
+      "one-man-army",
+      "task-dimension-llm",
+      "change-management",
+      "ai-coding-schools",
+      "api-contract-timing",
+      "red-bonus-opportunity",
+      "ai-coding-adoption-gap",
+      "code-standards-ai-era",
+      "org-bottleneck-layoffs"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-17",
+    "last_seen": "2026-03-03",
+    "total_quotes": 77,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "我有个很好的朋友，CXO级别，AI严重焦虑，飞过来找我线下咨询，我核心工作是帮他搭好环境，换Mac，Terminal（Warp），VPN，然后Claude Code MCP接上Slack，我帮他输了一个Prompt：\"拉取最近三个月CEO的发言，分析CEO人格，给我和CEO沟通的意见\"",
+        "weight": 3,
+        "source": "2026-02-21-18-40-env-barrier-ai-unlock.md",
+        "topic": "env-barrier-ai-unlock"
+      },
+      {
+        "type": "summary_mention",
+        "text": "Sayalic describes flying in a CXO-level friend who was deeply anxious about AI, spending a session purely on environment setup (Mac, Terminal/Warp, VPN, Claude Code + MCP/Slack), then watching the person become obsessed with AI overnight — purely because they could finally use it properly",
+        "weight": 2,
+        "source": "2026-02-21-18-40-env-barrier-ai-unlock.md",
+        "topic": "env-barrier-ai-unlock"
+      },
+      {
+        "type": "summary_mention",
+        "text": "几个关键洞察值得深入：(1) 谭嘉荣透露Claude Code团队仅7人，但\"没有完全整理出自己的工作方法论，基本上都是力大转飞\"；(2) 马工的类比\"有点像生物学家发现了新生物，但发现者并不一定就是最好的驯兽师\"非常精准——制造工具的人未必是最佳使用者；(3) Sayalic指出基模公司的流程是\"训练→跑benchmark→发布\"，与最终用户的使用方法论完全脱节",
+        "weight": 2,
+        "source": "2026-03-03-19-24-ai-team-org-structure.md",
+        "topic": "ai-team-org-structure"
+      },
+      {
+        "type": "summary_mention",
+        "text": "讨论中几个关键洞见：1) 锅指出这本质上是PRD写作能力问题，和AI无关；2) 陈浩诊断出Nemo在做vibe coding而非SDD；3) Sayalic指出\"prompt搞不定，指望别人的skill能搞定是许愿\"；4) 车明君总结\"前80% ROI很高，真正有挑战在剩余的20%\"",
+        "weight": 2,
+        "source": "2026-02-28-19-10-spec-alignment-vibe-vs-sdd.md",
+        "topic": "spec-alignment-vibe-vs-sdd"
+      },
+      {
+        "type": "raw_quote",
+        "text": "我的流程：1. PRD（做什么东西，有什么功能）；2. 设计规范（使用什么组件库，app主色调是什么，选什么字体，主要字体大小，次级字体大小）；3. ASCII原型搞",
+        "weight": 3,
+        "source": "2026-01-29-19-39-change-management.md",
+        "topic": "change-management"
+      }
+    ]
+  },
+  {
+    "name": "马工",
+    "mention_count": 216,
+    "at_count": 332,
+    "topic_count": 204,
+    "topics": [
+      "ceo-roi-lag",
+      "chat-archive-open",
+      "ops-vs-dev-ai",
+      "one-man-army",
+      "humans-cheaper-than-gpu",
+      "personal-workflow",
+      "video-editing-ai-workflow",
+      "cost-structure-reshaping",
+      "task-dimension-llm",
+      "bottleneck-shift"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-18",
+    "last_seen": "2026-03-22",
+    "total_quotes": 983,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "大概思路就是 1.聊天原始记录在repo上 2.cc pick-chat skill找到几个candidate topics，我选择了漏斗模型这个话题 3.我和cc琢磨改进模型，把五层改成了七层 4.我让cc写个大纲 5.我修改大纲 6.我让cc写第一段，修改琢磨 7.我让cc写第二部分，修改琢磨 8.如此往复 9.调用 /review寻找ai味特别浓的句子，或者论证不够严谨的逻辑链缺失，或者excessive use of English  10.用 /convert转换成微信公众号友好的html， 11.手动发布，因为张小龙不提供api",
+        "weight": 3,
+        "source": "2026-01-18-chat-archive-open.md",
+        "topic": "chat-archive-open"
+      },
+      {
+        "type": "raw_quote",
+        "text": "模型能力是核心问题    GLM-4 和 Claude/GPT-4 级别的模型在代码生成上有明显差距，尤其体现在：    1. 语法细节 - 括号、分号、类型转换这些\"小事\"   2. API 精确调用 - 参数顺序、方法名拼写、重载方法选择   3. 跨文件一致性 - 多文件项目中保持 import、类型、命名一致    如果必须用 GLM-4    几个务实的建议：    1. 降低单次任务复杂度...   4. 考虑混合策略    - 规划阶段：GLM-4 够用（PRD、拆分任务）   - 写代码阶段：用更强的模型（Claude、GPT-4）    如果代码量不大，Claude/GPT-",
+        "weight": 3,
+        "source": "2026-01-25-17-22-glm-model-limits.md",
+        "topic": "glm-model-limits"
+      },
+      {
+        "type": "raw_quote",
+        "text": "2. Branching：Branching 成为一等能力，这里的 Branching，和传统意义上的 Git Worktree 和分支已经不完全是一回事了。它更像是一种系统级能力，用来描述任务执行过程中的不同可能性。你可以为同一个目标同时展开多条路径，让不同的 Agent 或同一个 Agent 在不同环境里各自推进。它们共享目标，但不共享副作用。这个 Branching 由数据库（管理元信息）和支持分支的文件系统提供底层能力。",
+        "weight": 3,
+        "source": "2026-01-27-08-02-agent-runtime-branching.md",
+        "topic": "agent-runtime-branching"
+      },
+      {
+        "type": "raw_quote",
+        "text": "@Nick@保利威直播   我又找到了一个不用bmad的理由了  我弄了个integrate slash command，这个command是一个orchestrator  它会调用planner subagent去阅读银行api，选择合适的auth flow，制定出详细的对接计划  然后orchestrator调用我的tester 和 coder subagent去写代码。这两个是项目无关的，只是语言specific",
+        "weight": 3,
+        "source": "2026-01-28-23-42-custom-orchestrator.md",
+        "topic": "custom-orchestrator"
+      },
+      {
+        "type": "raw_quote",
+        "text": "今天发现，测试的分工确实是需要进一步的挖掘  比如说今天有两次Simulator.测试都失败了。一次呢，是因为我的主体代码写错了。而我的Simulator是对的。这种情况下应该修改的是主体代码，但实际上，Claude Code决定修改Simulator，因为他觉得那样简单。  然后第二次测试失败，其实是因为Simulator对API的理解有误，但是Claude Code呢，又决定要修改主体代码。  我觉得有一个原因是因为，claude code 那个时候已经有点混乱了，他尝试过多次之后，其实已经失去了常识",
+        "weight": 3,
+        "source": "2026-01-29-19-39-tech-owner-quality-owner-separation.md",
+        "topic": "tech-owner-quality-owner-separation"
+      }
+    ]
+  },
+  {
+    "name": "王欢",
+    "mention_count": 46,
+    "at_count": 267,
+    "topic_count": 46,
+    "topics": [
+      "one-man-army",
+      "video-editing-ai-workflow",
+      "task-dimension-llm",
+      "product-architect-role",
+      "xu-document-method",
+      "bmad-critique-waterfall",
+      "ai-coding-commercialization",
+      "api-is-soul",
+      "ai-consulting-wins",
+      "api-as-soul"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-19",
+    "last_seen": "2026-03-20",
+    "total_quotes": 23,
+    "evidence": [
+      {
+        "type": "summary_mention",
+        "text": "群里分享通过工程方法主动或者被动提升组织中个体的下限的实践，也非常有价值， 1，在王欢的案例中，他并没有放弃组织的个体，而是亲手做一个Agentic工作流平台，让组织中的人低门槛能够利用AI杠杆提升工作效率和质量 2，胥老师这个新的AI开发工具项目，不仅把工具的能力上限发挥出来，同时也内嵌工程方法来降低门槛为非专业用户服务 3，陈明辅导客户案例中提到，试点小组中测试leader如果学习能力跟不上，就要考虑换掉",
+        "weight": 2,
+        "source": "2026-02-19-19-26-engineering-floor-ceiling.md",
+        "topic": "engineering-floor-ceiling"
+      },
+      {
+        "type": "summary_mention",
+        "text": "Key insights: (1) 胥克谦 identifies context isolation as the primary value of subagents, not parallelism; (2) 鸭哥 admits even he cannot control agent teams reliably (\"改完prompt/机制也不知道会不会就能用了\"); (3) 王欢",
+        "weight": 2,
+        "source": "2026-03-06-20-59-agent-team-control.md",
+        "topic": "agent-team-control"
+      },
+      {
+        "type": "summary_mention",
+        "text": "王欢 drew a parallel between token spending and TikTok traffic arbitrage: early adopters get disproportionate value per token spent, and this advantage will shrink over time",
+        "weight": 2,
+        "source": "2026-02-07-18-39-token-roi-early-adopter.md",
+        "topic": "token-roi-early-adopter"
+      },
+      {
+        "type": "summary_mention",
+        "text": "The discussion splits between those who think the role boundary should dissolve entirely (谭嘉荣) and those who see a necessary transition period (陈明, 王欢",
+        "weight": 2,
+        "source": "2026-02-10-08-39-product-dev-role-collapse.md",
+        "topic": "product-dev-role-collapse"
+      },
+      {
+        "type": "summary_mention",
+        "text": "**Even pseudocode-level specs aren't enough** — 王欢 went as far as writing pseudocode in the dev plan, yet implementation still drifts",
+        "weight": 2,
+        "source": "2026-02-13-17-43-devplan-implementation-drift.md",
+        "topic": "devplan-implementation-drift"
+      }
+    ]
+  },
+  {
+    "name": "Stone",
+    "mention_count": 26,
+    "at_count": 14,
+    "topic_count": 26,
+    "topics": [
+      "dev-setup-trust",
+      "method-over-model",
+      "skill-self-evolution",
+      "agent-runtime-branching",
+      "management-as-ai-skill",
+      "ai-autonomy-workflow",
+      "openclaw-context-management",
+      "agent-future-infrastructure",
+      "code-review-ai-era",
+      "agent-reliability"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-24",
+    "last_seen": "2026-03-22",
+    "total_quotes": 89,
+    "evidence": [
+      {
+        "type": "summary_mention",
+        "text": "A discussion between Stone, 曹俊, and 胥克谦 on how to manage agent memory at scale — including a novel \"rent-based\" eviction algorithm, Hinton's observation that human memory is reconstructive not retrievive, and the practical challenge that indexing alone isn't enough without prioritisation",
+        "weight": 2,
+        "source": "2026-03-22-09-05-agent-memory-economics.md",
+        "topic": "agent-memory-economics"
+      },
+      {
+        "type": "summary_mention",
+        "text": "Stone's \"credit-based eviction\" idea (each memory item pays rent over time, usage adds credit, bankrupt items get evicted or moved to cheaper storage) is an elegant economic metaphor worth prototyping",
+        "weight": 2,
+        "source": "2026-03-22-09-05-agent-memory-economics.md",
+        "topic": "agent-memory-economics"
+      },
+      {
+        "type": "summary_mention",
+        "text": "Stone extended this with the idea of agent KPIs: agents should earn \"tokens\" that exceed their consumption, creating a market-like reward system for agent performance evaluation",
+        "weight": 2,
+        "source": "2026-03-06-20-59-software-as-algorithm.md",
+        "topic": "software-as-algorithm"
+      },
+      {
+        "type": "summary_mention",
+        "text": "Combined with Stone's agent KPI concept (earned value minus token consumption as agent performance metric), this sketches out what \"AI-native project management\" might look like",
+        "weight": 2,
+        "source": "2026-03-06-20-59-software-as-algorithm.md",
+        "topic": "software-as-algorithm"
+      },
+      {
+        "type": "summary_mention",
+        "text": "但讨论揭示了几个层次：1) Ethan的洞见——\"隐性知识，你做的业务里头有些隐性的不是很llm模型没办法知道的，你spec里头又没写清楚\"——这正是AI无法替代的部分；2) 陈浩提出用code review反馈来迭代coding相关的skill，形成闭环；3) Stone的极端立场\"杜绝手工写代码\"暗示一种新的管理范式",
+        "weight": 2,
+        "source": "2026-02-28-19-10-code-review-ai-era.md",
+        "topic": "code-review-ai-era"
+      }
+    ]
+  },
+  {
+    "name": "linhow",
+    "mention_count": 35,
+    "at_count": 68,
+    "topic_count": 33,
+    "topics": [
+      "chat-archive-open",
+      "task-dimension-llm",
+      "bottleneck-shift",
+      "ai-replace-doctor",
+      "human-intervention-bug",
+      "human-intervention-bugs",
+      "human-intervention-causes-bugs",
+      "human-bottleneck-for-ai",
+      "red-bonus-opportunity",
+      "ai-coding-adoption-gap"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-18",
+    "last_seen": "2026-03-16",
+    "total_quotes": 135,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "这个话题挺好的，我尝试小结一下，  软件工程中，AI和人类针对如下两类问题的视角： 1、好不好的原则：高内聚低耦合的抽象和架构设计原则，大部分是可以共享的。也就是说，大部分人类总结的架构和设计原则，AI眼中也是最佳实践。不同公司都基本遵守相同的原则 2、美不美的规则：如代码风格类规则（如命名、符号函数文件长度等），大部分是有差异的。也就是说AI眼中的最佳代码风格，和人类眼中的代码最佳风格差异很大。不同公司其实也不一样",
+        "weight": 3,
+        "source": "2026-02-09-19-03-code-standards-ai-era.md",
+        "topic": "code-standards-ai-era"
+      },
+      {
+        "type": "raw_quote",
+        "text": "传统软件工程一直是一个精英控制工程模式，不到10% 的工程师控制了90% 的产品定义、软件架构、代码质量、测试金字塔、持续交付、部署和任务为架构，以及组织级持续改进。  大部分人只是跟着队伍走到了延安，并不知道为什么要到延安，以及怎么成功的到了延安，这已经是优秀的码农了。",
+        "weight": 3,
+        "source": "2026-02-18-18-49-org-transformation-pressure.md",
+        "topic": "org-transformation-pressure"
+      },
+      {
+        "type": "summary_mention",
+        "text": "陈明 and linhow shared their frustrating experience trying to convert peers to AI coding - even close friends with technical skills show no interest, preferring to \"coast until retirement\" rather than adapt",
+        "weight": 2,
+        "source": "2026-02-01-23-19-ai-coding-adoption-gap.md",
+        "topic": "ai-coding-adoption-gap"
+      },
+      {
+        "type": "raw_quote",
+        "text": "我最近几个月也刻意去影响了比较亲近的十来个朋友，只有两个成功地进来了。有一个现在进入了癫狂状态  其他的人也都是技术好手，但陷入当前的工作里面，感觉不学AI软件工程也没关系，日子照过  我原来设想的干柴烈火状态，每个人得到我点拨后都希望送我两瓶茅台的激情，并没有发生",
+        "weight": 3,
+        "source": "2026-02-01-22-49-red-bonus-opportunity.md",
+        "topic": "red-bonus-opportunity"
+      },
+      {
+        "type": "raw_quote",
+        "text": "感觉这是个两难问题：  如果调用SDK，就需要自己有强大的研发能力（毛估中小公司基本上没这个能力），而且会错失主力厂商每个月释放出来的红利。  如果直接使用Agent，在编排的灵活性上面就会有很大的限制。但CC每天发一个版本的新特性，就可以直接用了",
+        "weight": 3,
+        "source": "2026-02-21-08-01-orchestration-memory.md",
+        "topic": "orchestration-memory"
+      }
+    ]
+  },
+  {
+    "name": "陈明",
+    "mention_count": 64,
+    "at_count": 121,
+    "topic_count": 62,
+    "topics": [
+      "one-man-army",
+      "task-dimension-llm",
+      "ai-consulting-cxo",
+      "custom-orchestrator",
+      "moe-prompt-expert",
+      "moe-expert-trigger",
+      "ai-coding-commercialization",
+      "api-is-soul",
+      "ai-consulting-wins",
+      "api-as-soul"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-19",
+    "last_seen": "2026-03-21",
+    "total_quotes": 232,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "分布式计算的八大谬误由Sun Microsystems工程师Peter Deutsch于1994年提出，后由James Gosling补充，揭示了开发者对分布式系统的常见错误假设：    1. 网络是可靠的      实际网络存在丢包、中断、拥塞等问题，需设计容错机制（如重试、超时）。    2. 延迟为零      跨节点通信必然有延迟，忽略会导致性能误判（例如同步调用阻塞）。    3. 带宽无限      数据传输受带宽限制，频繁传输大文件需优化（如分块、压缩）。    4. 网络是安全的      默认不信任网络，需加密、认证（如TLS、OAuth2）。    5. 拓扑不变     ",
+        "weight": 3,
+        "source": "2026-02-07-18-39-production-vs-demo.md",
+        "topic": "production-vs-demo"
+      },
+      {
+        "type": "raw_quote",
+        "text": "跟大家同步一下年后测试方向的规划。  一、大方向  年后先从后端切入，目标明确：API 测试 100% 自动化覆盖，主要业务流程实现 E2E 自动化执行。之前缺失的测试用例，用 AI 辅助快速补齐。后端基本到位后，再推进前端测试方案的探索。  二、对测试同事的要求  技术栈上，要求掌握 Java + Spring Boot 体系，使用 Claude Code 进行测试设计、编写和维护。所以测试框架、Claude Code 等工具的使用也需要尽快跟上。后端自动化测试这几年已经非常成熟，没有太多技术悬念，核心就是尽快掌握并落地。如果目前还有能力差距的同事，建议过年期间抓紧补一补。  三、测试的未来",
+        "weight": 3,
+        "source": "2026-02-12-19-25-team-transformation.md",
+        "topic": "team-transformation"
+      },
+      {
+        "type": "raw_quote",
+        "text": "我觉得你管他大不大呢，你先硬啃硬吃，你多拿它做几个项目，你自己慢慢就能有自己体会总结自己可能更适合自己的方法，但是有一个问题就是那是你的方法，你还是很难去团队协作，所以这也是为什么我在团队中首先还是会推荐大家去了解，甚至推行一段时间bmad的原因。毕竟相对来说测试的更充分，而且迭代的速度一点也不慢。",
+        "weight": 3,
+        "source": "2026-02-19-09-03-bmad-user-role-mismatch.md",
+        "topic": "bmad-user-role-mismatch"
+      },
+      {
+        "type": "summary_mention",
+        "text": "陈明 and linhow shared their frustrating experience trying to convert peers to AI coding - even close friends with technical skills show no interest, preferring to \"coast until retirement\" rather than adapt",
+        "weight": 2,
+        "source": "2026-02-01-23-19-ai-coding-adoption-gap.md",
+        "topic": "ai-coding-adoption-gap"
+      },
+      {
+        "type": "summary_mention",
+        "text": "**Commercial implications**: 陈明 observed that \"many companies and consulting firms are already asking whether they can hire these two as advisors\" — the demand for AI dev transformation expertise is outstripping supply",
+        "weight": 2,
+        "source": "2026-02-11-21-59-kuaishou-ai-dev.md",
+        "topic": "kuaishou-ai-dev"
+      }
+    ]
+  },
+  {
+    "name": "Lex",
+    "mention_count": 25,
+    "at_count": 35,
+    "topic_count": 24,
+    "topics": [
+      "chat-archive-open",
+      "codex-workflow",
+      "cc-rag-vs-grep",
+      "task-dimension-llm",
+      "parallel-cc-ux",
+      "agent-self-learning",
+      "skill-self-evolution",
+      "tdd-debate",
+      "engineering-bottleneck",
+      "code-standards-ai-era"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-18",
+    "last_seen": "2026-03-10",
+    "total_quotes": 67,
+    "evidence": [
+      {
+        "type": "summary_mention",
+        "text": "The tension is genuine: Lex argues the efficiency mismatch makes human review operationally infeasible; Liu Lianxiang counters that review catches risks functional testing cannot (operational sustainability); Feng Qi flatly states there is zero evidence human code review quality exceeds AI code revi",
+        "weight": 2,
+        "source": "2026-03-04-18-24-code-review-dead.md",
+        "topic": "code-review-dead"
+      },
+      {
+        "type": "raw_quote",
+        "text": "我现在比较能理解，开发过程中代码变更频率极高，RAG设计的目的就不是应对这类场景的，而且在具体功能开发中，真正需要花费注意力去关注的相关代码规模是不大的，依靠出色的推理能力用 grep 提取到最新鲜的代码性能表现上可能并不会比依靠囫囵印象去RAG里翻一通来的低",
+        "weight": 3,
+        "source": "2026-01-20-22-59-cc-rag-vs-grep.md",
+        "topic": "cc-rag-vs-grep"
+      },
+      {
+        "type": "raw_quote",
+        "text": "因为在本地没有必要，还影响效率。各种服务（快递/餐饮/出行）的接口还是会由供应商提供的，Agent厂家就好比现在的阿里字节腾讯，厂家一定会希望你绑死在自己手上，全部数据完全不会被其他对手访问到的，何必要在本地单独去通过Agent调用呢。何况成本还更高",
+        "weight": 3,
+        "source": "2026-02-28-10-25-agent-future-infrastructure.md",
+        "topic": "agent-future-infrastructure"
+      },
+      {
+        "type": "raw_quote",
+        "text": "我没试过，不过可以提供个思路，终端中可以用 printf '\\e]2;NewTitle\\a'; 修改标题的，结合cc hook 和cc session的名字是不是可以探索一下",
+        "weight": 3,
+        "source": "2026-01-24-10-39-parallel-cc-ux.md",
+        "topic": "parallel-cc-ux"
+      },
+      {
+        "type": "raw_quote",
+        "text": "以前code review合理是因为代码写和审的效率差不多，在工作流的衔接上不至于产生瓶颈。现在AI 生成代码的速度是人的几千上万倍，还靠人审你要怎么去做这个效率匹配？",
+        "weight": 3,
+        "source": "2026-03-04-18-24-code-review-dead.md",
+        "topic": "code-review-dead"
+      }
+    ]
+  },
+  {
+    "name": "崔富泽",
+    "mention_count": 74,
+    "at_count": 81,
+    "topic_count": 69,
+    "topics": [
+      "ai-patience",
+      "chat-archive-open",
+      "ops-vs-dev-ai",
+      "one-man-army",
+      "cost-structure-reshaping",
+      "nick-bmad-share",
+      "dev-setup-trust",
+      "ppt-as-agent",
+      "methodology-over-model",
+      "method-over-model"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-17",
+    "last_seen": "2026-03-22",
+    "total_quotes": 217,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "我讲一讲这几次的虾都是怎么死的 第一只，智谱云电脑+glm coding  plan 因为智谱的云电脑内置的虾版本太低了，我就升级了一下，结果用完一天之后发现，云电脑只有某些特定的文件夹是给你持久存储的。第二天我的虾就死光光了  第二只，我买了个腾讯云+glm coding plan，但是我这次没有开新的飞书机器人，直接沿用上一次云电脑的。因为当时在云电脑，我的虾有两个窗口，一个主窗口，是主agent，所有的当日memory都是随着主agent来的，一个群聊附窗口，他的memory是json格式保存的，无法做到每日自动记录记忆。 奇葩的事情来了，我在腾讯云部署完龙虾之后，第一句话是用群聊龙虾聊",
+        "weight": 3,
+        "source": "2026-03-02-20-00-agent-reliability.md",
+        "topic": "agent-reliability"
+      },
+      {
+        "type": "raw_quote",
+        "text": "然后对于自我迭代的提示词，我现在也停用了。这个问题之前和leo，nick两位老哥讨论过：如果定时必须让他进化，他会有点为了进化而进化了 也就是ai实际上没有理解我哪些东西是需要次抛的，哪些东西是需要长久化的 其实。。。长久化的东西，我自然会让他生成skill来记住 [Facepalm]所以这个自我进化机制，em。。我感觉有点鸡肋了",
+        "weight": 3,
+        "source": "2026-03-10-19-31-agent-self-evolution.md",
+        "topic": "agent-self-evolution"
+      },
+      {
+        "type": "raw_quote",
+        "text": "1、技能会不会越来越多，导致模型不堪重负，越来越容易走偏 2、技能如果从多技能变成提升成高维技能，那么高维技能的精准度会会下降，因为细节可能会丢失。3、就是啥时候是个结尾，如果强行定时进化，那就是大概率系统越来越复杂，突变错的累积机会就越来越多。如果你设定了一个清晰的结束标志，那么你就是agent的天花板，那么进化有啥意义？",
+        "weight": 3,
+        "source": "2026-03-10-19-31-agent-self-evolution.md",
+        "topic": "agent-self-evolution"
+      },
+      {
+        "type": "raw_quote",
+        "text": "哦对了。通过我的体验，我来为小龙虾正名一下。虽然，他的所有功能， 我们使用claude code都能执行的更好。那么，为什么我依然觉得有价值，而且价值很大呢。就我举个例子吧，你比如说购物的话，你上电脑上打开网站，跟你在手机上直接开个APP，实际上达成的效果是一样的，对吧？但是为什么现在大家都更习惯在手机上直接下单购物呢？",
+        "weight": 3,
+        "source": "2026-01-31-08-29-engineering-bottleneck.md",
+        "topic": "engineering-bottleneck"
+      },
+      {
+        "type": "raw_quote",
+        "text": "环境一变，场景也变了。Claude Code 技术上完全能做\"提醒你明天带伞\"这件事。但你早上起来会打开终端看 AI 昨晚输出了什么吗？不会。而 IM 你本来就要看——起床第一件事就是刷消息，OpenClaw 的提醒夹在朋友的消息、工作群的通知中间，自然就看到了。这个场景在终端里根本不成立，不是做不到，是没有人会那样用。",
+        "weight": 3,
+        "source": "2026-03-15-12-29-openclaw-cc-product-forms.md",
+        "topic": "openclaw-cc-product-forms"
+      }
+    ]
+  },
+  {
+    "name": "鸭哥",
+    "mention_count": 23,
+    "at_count": 66,
+    "topic_count": 22,
+    "topics": [
+      "ai-native-hardware",
+      "cost-structure-reshaping",
+      "million-dollar-flag",
+      "agent-dialogue",
+      "alignment-cost-zero",
+      "bmad-user-role-mismatch",
+      "ai-leverage-decisions",
+      "lobster-memory-layers",
+      "agent-team-control",
+      "ai-compiler-cooptimisation"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-19",
+    "last_seen": "2026-03-21",
+    "total_quotes": 99,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "今天我用AI完成了一个小任务。感觉这个案例特别适合用来介绍AI的实战原则，所以写了这篇文章来分享一下。  任务本身是给这个blog里的每一篇文章都加一行summary，这样可以帮助搜索引擎理解这个网站的内容，从而提升这个网站的排名（SEO）。这个任务，我用语音识别花了大概两分钟把指令讲给AI，然后AI自己折腾了45分钟，全程我就没再管了。这就是一种leverage。用两分钟的时间，撬动了AI 45分钟的工作量。更准确地说，用5%的时间控制了100%的工程产出。  但是在表面的顺利之下，这个任务其实有很多坑，一不小心就会陷入AI鬼打墙、不可靠、使用繁琐的陷阱。这篇文章主要分享在这个过程中我做了哪",
+        "weight": 3,
+        "source": "2026-02-21-08-01-ai-leverage-decisions.md",
+        "topic": "ai-leverage-decisions"
+      },
+      {
+        "type": "raw_quote",
+        "text": "# COMMUNICATION.md - 沟通风格指南  ## 语言风格  务实、理性、克制。用思考深度体现专业，不堆砌宏大词藻，不用文学性比喻。  - 不用华丽辞藻，不用\"惊喜\"这类营销词汇 - 不滥用 bullet points，尽量用自然语言段落表达 - 不用引号（除非必要） - 不说废话，不说客套话，直奔主题 - 用数据和逻辑说话，不靠形容词 - 不要用破折号（——/—/--）。能拆成两句的，拆开写；能用冒号或分句表达的，用冒号或分句。「主句——插入——主句」这种结构尤其要避免 - 避免否定句式，改用正向陈述。原则：与其说 X 不是 Y，不如直接说 X 是什么。例子：   - `you",
+        "weight": 3,
+        "source": "2026-03-08-12-32-duck-writing-style-prompt.md",
+        "topic": "duck-writing-style-prompt"
+      },
+      {
+        "type": "raw_quote",
+        "text": "非常初步的一个结果（中间的一小节）  # V04 业务终点论  ## 核心表述  工程活动的终点是业务竞争力，不是技术优雅。工程师是成本中心，做出的软件要支撑业务发展而非自娱自乐。  ## 展开  马工用\"成本中心\"来定义工程团队的组织位置，并由此推导出一条评价标准：工程决策的最终裁判是业务结果，不是代码质量本身。他说\"你团队的目标不是做出好的软件，而是做出支撑业务发展的软件\"——这不是反质量，而是把质量从独立价值降级为业务约束下的手段。  [...]  ## 可信度  9.0/10。证据密度高且跨群一致，反例是战术折中而非立场逆转。",
+        "weight": 3,
+        "source": "2026-03-13-19-12-clone-magong-model.md",
+        "topic": "clone-magong-model"
+      },
+      {
+        "type": "raw_quote",
+        "text": "用了AI这么些年，总觉得它输出的大都是正确的废话，看完确实挑不出毛病，但也没什么营养。就算是Deep Research，名字起得也很有误导性，出来的更像是广度为主的报告杂烩，但没办法带给我真正有深度的分析。  这篇文章介绍了为什么LLM有这样的倾向，并且结合最近一年的系统性实验（已开源），向大家展示了一种方法，如何让AI变得更有深度和帮助。（例子：https://www.superlinear.academy/c/news/，都是AI生成的调研报告）  文章：https://yage.ai/context-infrastructure.html",
+        "weight": 3,
+        "source": "2026-03-16-09-23-context-infrastructure-depth.md",
+        "topic": "context-infrastructure-depth"
+      },
+      {
+        "type": "raw_quote",
+        "text": "测了一下M5 Max，比M4 Max prefilling提升明显（2.2x），但一定要用对格式和工具（MLX和vLLM-MLX），否则提升会大打折扣（比如gguf格式只有30%提升）。单线程prefilling性能差不多到5090的一半，老实说已经超出预期了。  具体数据：  gguf格式，prefilling快了31%，decoding快了29%。 QWen3.5-35b-a3b M4 Max prefiling 503 t/s, decoding 39.7 t/s M5 Max prefilling 660 t/s, decoding 51.1 t/s  MLX格式，如果用llama.c",
+        "weight": 3,
+        "source": "2026-03-17-18-40-m5-max-benchmarks.md",
+        "topic": "m5-max-benchmarks"
+      }
+    ]
+  },
+  {
+    "name": "Player¹",
+    "mention_count": 38,
+    "at_count": 74,
+    "topic_count": 35,
+    "topics": [
+      "meta-capability-framework",
+      "parallel-cc-ux",
+      "dev-setup-trust",
+      "ppt-as-agent",
+      "agent-self-learning",
+      "ppt-to-agent",
+      "skill-self-evolution",
+      "bmad-critique-waterfall",
+      "custom-orchestrator",
+      "ai-coding-schools"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-24",
+    "last_seen": "2026-03-21",
+    "total_quotes": 107,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "@马工  是这个意思不  \"如果我不在家，且客厅温度超过 30°C，就帮我打开空调并调到 26°C，然后发个微信通知我\"  AI 的输出或者理解  [   \"if\",    [\"and\",      [\"not\", [\"get_status\", \"is_home\"]],      [\"gt\", [\"get_sensor\", \"living_room_temp\"], 30]   ],   [     \"do\",     [\"call_device\", \"air_conditioner\", \"power_on\"],     [\"call_device\", \"air_conditioner\", \"s",
+        "weight": 3,
+        "source": "2026-03-04-18-24-anti-fluency-dsl.md",
+        "topic": "anti-fluency-dsl"
+      },
+      {
+        "type": "raw_quote",
+        "text": "消除条件分支联想： 通常 AI 看到 Step 4: 实现代码 会自动开始写 for task in tasks...。但在 AILock-Step 中，STP-304 强行使用一个逻辑判断把指针甩回了 STP-301。这打破了 AI 习惯的结构化编程语料，它必须像处理汇编语言（Assembly）一样去计算跳转。  严格的输入输出约束： 使用了 DATA-IN、VAL-SET、POINTER 等非标准词汇，其他 AI 在尝试预测下一个 Token 时，无法利用现有的 Python 或 JavaScript 语料库进行加权，从而被迫进入\"严格遵循指令模式\"。  状态机化： 通过 STP-ERR ",
+        "weight": 3,
+        "source": "2026-03-04-18-24-anti-fluency-dsl.md",
+        "topic": "anti-fluency-dsl"
+      },
+      {
+        "type": "raw_quote",
+        "text": "跟 AI 说， 你去创建一种 不让循环，不让自定义， 执行按照标准的简单积木搭建语法，语法只有简单的逻辑判断和执行，目的是让 其他 AI觉着陌生，没有相关类似的语料知识 让其他 AI 难过，只能按照标准流程执行",
+        "weight": 3,
+        "source": "2026-03-04-18-42-dsl-for-llm-control.md",
+        "topic": "dsl-for-llm-control"
+      },
+      {
+        "type": "summary_mention",
+        "text": "马工: 流派已经很明确了  @许式伟 的产品架构师和@dongxu(有时差回复慢) 的头狼，是一个流派  @NirVa 的CVP和我的Tri-Ownership是另外一个流派  @Player¹ 又是另外一个流派，试图让每个人都用上，我认为他会是第一个被证否的",
+        "weight": 2,
+        "source": "2026-01-29-17-01-ai-coding-schools.md",
+        "topic": "ai-coding-schools"
+      },
+      {
+        "type": "summary_mention",
+        "text": "Player¹ demos a custom IDE (electron + xterm wrapper) that could solve this with task descriptions per window",
+        "weight": 2,
+        "source": "2026-01-24-10-39-parallel-cc-ux.md",
+        "topic": "parallel-cc-ux"
+      }
+    ]
+  },
+  {
+    "name": "胥克谦",
+    "mention_count": 117,
+    "at_count": 203,
+    "topic_count": 112,
+    "topics": [
+      "codex-workflow",
+      "one-man-army",
+      "cursor-vs-cc-focus",
+      "task-dimension-llm",
+      "product-architect-role",
+      "xu-document-method",
+      "ai-timing-focus",
+      "dev-setup-trust",
+      "ppt-as-agent",
+      "methodology-over-model"
+    ],
+    "influence": "core",
+    "influence_score": 1.0,
+    "first_seen": "2026-01-17",
+    "last_seen": "2026-03-22",
+    "total_quotes": 757,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "昨天早上完成的prd与架构文档生成skill ，昨天通过新任务实际使用优化了一天，优化后的通过了质量考验，配合其他如开发计划和todo skill ，一天时间从还没有开始需求设计，到直接全程全套文档全部完成。实际大半时间在反复通过结果反向优化这两个skill 。实际全套时间只有半天了。也就是由本来就很快的2-3天，压缩到0.5天。然后进一步，升级了执行开发skill ，增加了多阶段连续滚动执行模式，无论规模多大、划分了多少个开发阶段，都可以自动一次性完成所有阶段的开发，中断可续跑，自动释放清理上下文…",
+        "weight": 3,
+        "source": "2026-02-11-21-59-skill-as-coding-agent.md",
+        "topic": "skill-as-coding-agent"
+      },
+      {
+        "type": "raw_quote",
+        "text": "嗯，编码阶段由于有TDD之类非常成熟，所以只要解决了上下位丢失问题，编码环节就可以过关了。 现在表面上编码质量问题，实际上是文档质量不合格。  但文档如何自动化保证质量，是很大的挑战。我这边还算是有不错的进展，在上次见面看到的已经又有很大的进步，专门的门禁发现质量问题，包括没有展开描述到足够详细细节的程度的等等，都会自动通知LLM来处理。现在PRD和架构文档已经搞完了，正在升级开发计划文档生成skill的质量门禁。  都处理完成后，再移植一下superpowers里自动启动新会话和subagent的机制，避免5.4之类的短期行为，自动多会话多agent来连续执行下去，避开对5.2能力的依赖。应",
+        "weight": 3,
+        "source": "2026-03-18-03-07-doc-quality-bottleneck.md",
+        "topic": "doc-quality-bottleneck"
+      },
+      {
+        "type": "raw_quote",
+        "text": "我最近一周一直在一周多前分享的skill做法的基础上，进一步加强文档质量，做严格的文档质量门禁，保证LLM压缩丢信息的情况下，也会由门禁触发LLM查漏补缺，保证文档质量达标。目前看起来效果还行，完成了prd、架构文档的，目前实际执行效果还不错，也尽可能做了泛化能力。分阶段开发计划文档的质量门禁还在进行中，到全套完成，我会回过头来真正把文档测试（代码前测试）也做成skill，也建立质量门禁",
+        "weight": 3,
+        "source": "2026-03-17-16-44-testing-before-coding.md",
+        "topic": "testing-before-coding"
+      },
+      {
+        "type": "raw_quote",
+        "text": "人看段落划分不清的书，也是会扔一边的 --------------- 「Anointed：其实对于人来说，大任务也是要拆分的。但是人在从文档中提取相关信息然后完成文档中的sub task的能力比llm强，因为llm selfattention和rope编码的限制导致其有lost in middle的缺陷。 所以针对llm设计的文档要多层 并且每一层都self contained」",
+        "weight": 3,
+        "source": "2026-03-22-09-05-self-contained-doc-deep-dive.md",
+        "topic": "self-contained-doc-deep-dive"
+      },
+      {
+        "type": "raw_quote",
+        "text": "上一版的最后描述，对我用压缩解压缩来描述前后环节文档之间的100%完整自包含的描述，跟我的意思也有些偏差 @Quanzhi Fu-PhD在读 。这样更有利于大模型的上下文窗口的高效利用，避免交叉读取带来的上下文溢出或压缩带来的信息丢失。越后序环节的文档，越要展开，保证可以更少的思考多的执行。文章最后对我表达的描述明显偏离了初衷，变成了坚持必须这样，明显这不是我的态度",
+        "weight": 3,
+        "source": "2026-03-17-16-44-agent-human-differences.md",
+        "topic": "agent-human-differences"
+      }
+    ]
+  },
+  {
+    "name": "Jun",
+    "mention_count": 18,
+    "at_count": 20,
+    "topic_count": 18,
+    "topics": [
+      "ai-patience",
+      "product-architect-role",
+      "dev-setup-trust",
+      "bmad-critique-waterfall",
+      "tech-owner-quality-owner-separation",
+      "tech-vs-quality-owner",
+      "qa-owner-separation",
+      "knowledge-depth-vs-ai",
+      "docs-as-state-machines",
+      "agent-dialogue"
+    ],
+    "influence": "core",
+    "influence_score": 0.97,
+    "first_seen": "2026-01-18",
+    "last_seen": "2026-03-20",
+    "total_quotes": 46,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "AI 的深刻影响怎么估计都不算过分。我提出的\"能力建在 AI 上\"并不是说大家多用 AI 工具就行了，而是我们要站在 AI 能力的背景下，重新去思考：  1. 我们的产品应该是什么样 2. 我们整个公司的组织形式、大家的协作方式、交互方式是什么样  人和人之间的沟通\"码率\"是非常低的，通信速度很慢，而且不可靠。每一个人基于自己过去的经历，对同一句话都可能有不同的理解，从而需要很多解释。  在 AI 的赋能下，公司应该是一个全新的生命体，有完全不同的组织和协作形式，我们的IT系统也需要重塑。这一方面需要自上而下的规划，同时也需要每个人、每个部门负责人在自己这个颗粒度上大胆假设，思考完全AI重塑自",
+        "weight": 3,
+        "source": "2026-01-22-17-01-product-architect-role.md",
+        "topic": "product-architect-role"
+      },
+      {
+        "type": "raw_quote",
+        "text": "以上 105 位参会人，注意是所有人，没有例外。 没有按时完成作业的人，或者做的事情太敷衍的人，我会认为TA已经不想在本公司工作了。  作业内容： 可以用 OpenClaw，也可以就用 OpenCode，把与自己工作有关的一件事自动化，这件事不论大小。 这件事在做作业之前和做作业之后的 Before-After 对比：做之前是自己做这件事，做之后是自己不断优化 Agent，让 Agent 做这件事。",
+        "weight": 3,
+        "source": "2026-03-07-18-46-ceo-forces-ai-homework.md",
+        "topic": "ceo-forces-ai-homework"
+      },
+      {
+        "type": "raw_quote",
+        "text": "交作业的方法： 在这个文件中添加一段你的文字，署名，写上什么事情自动化了，做之前和之后的效果对比。其中我的直接-1 我会安排给我视频展示，其他人可能会抽查让你给我视频演示。  为什么我这么看重参会人要交一份作业： 1. 学习和成长能力是咱们公司最为看重的。AI 发展到今天大家应该很清楚了，不会用、善用 AI，就像前几年不会用电脑、不会上网一样，必然是要淘汰的。所以不论是浪潮中不得不学，还是自己有一颗不断追寻新知的心主动要学，都得学起来、用起来。 2. 虽然起步有难度，但万事开头难，突破这个阶段就解锁了无限的可能性。但到了现在，碰到这个坎就畏缩了，觉得自己不用学、学不会，那是不行的。 3. Op",
+        "weight": 3,
+        "source": "2026-03-07-18-46-ceo-forces-ai-homework.md",
+        "topic": "ceo-forces-ai-homework"
+      },
+      {
+        "type": "raw_quote",
+        "text": "tombkeeper（TK 教主）写的，公众号「皮相」，3月7日发的。  核心论点：AI 革命走到了第四阶段（Autonomous Agent），这带出一个隐藏很久的问题：有钱人的钱该怎么花？  他的推理链条是这样的。人的消费受肉身限制，食欲性欲都有上限。奢侈消费边际效用递减极快，迪拜酋长一夏天 200 万英镑买草莓，也就是草莓而已。而且现代社会对富人消费有道德审视压力，私人飞机的碳排放都会被算清楚。  Token 消耗则完全不同。它既可以是生产资料，也可以是消费品，但目前社会还没把它和阶级政治挂钩，没有记者去算 Musk 每年烧多少 Token。游戏氪金有上限，Token 消耗的上限极高，而",
+        "weight": 3,
+        "source": "2026-03-10-19-31-agent-middleman-disruption.md",
+        "topic": "agent-middleman-disruption"
+      },
+      {
+        "type": "raw_quote",
+        "text": "跨学科的收敛：这不是AI的问题，这是一切系统的问题 如果这套逻辑只在计算工程中成立，它可能只是一个领域技巧。但一旦向外看，你会发现这个同构几乎无处不在。凡是需要从噪声中提取信号、从不确定性中生产确定性的地方，解法都收敛到同一组策略。 分子生物学：DNA的级联纠错。 DNA聚合酶的单次复制错误率大约是10⁻⁴——每复制一万个碱基就错一个。人类基因组30亿碱基，如果止步于此，每次复制就会产生约30万个突变，复杂生命不可能存在。但生物用了级联纠错：聚合酶自带校对（proofreading）把错误率压到10⁻⁷，错配修复（mismatch repair）再压到10⁻¹⁰。三层机制，每层独立，结构上就是",
+        "weight": 3,
+        "source": "2026-03-20-08-33-von-neumann-reliability.md",
+        "topic": "von-neumann-reliability"
+      }
+    ]
+  },
+  {
+    "name": "Nemo",
+    "mention_count": 16,
+    "at_count": 29,
+    "topic_count": 15,
+    "topics": [
+      "agent-future-infrastructure",
+      "agent-shopping-trust",
+      "spec-alignment-vibe-vs-sdd",
+      "context-pollution-debugging",
+      "saas-survival-ai-age",
+      "spec-vs-vibe-alignment",
+      "code-review-dead",
+      "dsl-for-llm-control",
+      "post-code-review-era",
+      "quality-control-brownfield-code"
+    ],
+    "influence": "core",
+    "influence_score": 0.94,
+    "first_seen": "2026-02-28",
+    "last_seen": "2026-03-19",
+    "total_quotes": 103,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "真正落地的困难点非常多。。。 你家的agent必须得能获取到你家庭成员的饮食习惯，过敏信息，食材剩余等等，甚至还要了解你们的健康状态，以便购买适量、适当的食材。 这个agent就和我们人一样，知道一些基础的必要的世界知识，比如查地图，当前周边有哪些大型综合超市。找到超市后，看能否通过通用协议连接上去，如果能，则提购买需求。 超市agent处理购买需求的流程就不细说了，结合现有的电商平台，简单改造就可行，千问已经出demo了。",
+        "weight": 3,
+        "source": "2026-02-28-10-25-agent-future-infrastructure.md",
+        "topic": "agent-future-infrastructure"
+      },
+      {
+        "type": "raw_quote",
+        "text": "我完整描述一下，我在用codex工作，项目中有一个表单。我做了一个AI表单助手，帮助用户填写表单。 这个助手也要求用户输入一段\"生成要求\"（告诉AI填什么样的内容，比如什么风格的故事）。这个助手称之为表单助手。  我让codex编写表单助手的提示词，codex的编写的内容就是我吐槽的重点： 1. 我告诉codex，生成角色的时候，不要提供完整的可选音色列表了，也就不要生成音色id字段了。 2. codex生成了一版后，提示词中写了\"禁止生成音色id字段\"，但是提供给助手的表单描述中都没有音色id字段。 3. 我指出codex的这个问题，它说理解错在哪了。然后，改了一版，表述中又包含了\"只生成角",
+        "weight": 3,
+        "source": "2026-03-03-19-24-context-pollution-debugging.md",
+        "topic": "context-pollution-debugging"
+      },
+      {
+        "type": "raw_quote",
+        "text": "拿一个项目测试了几种方法： 1。按照自己的想法整理一大堆文字，发给codex，和其讨论，定下来要做啥，它就去做。按照它的建议，继续做。最后做出来一坨屎 2。 把自己的想法整理成脑图文档，和codex沟通，写出来很多文档，包括产品需求文档、用户故事、技术实现方案、核心红线。让其实现，出来一坨屎。 3。 基于脑图继续分析，自行拆解为多个里程碑，每次仅提供一个里程碑的需求。结合openai的harness engineering博文总结出来的skill，生成若干文档。目前进行了几个里程碑了，包括较大范围的重构，看起来都很正常，codex说的话都像是我想让它说的一样。有点儿得心应手了。",
+        "weight": 3,
+        "source": "2026-03-08-18-42-milestone-requirement-alignment.md",
+        "topic": "milestone-requirement-alignment"
+      },
+      {
+        "type": "raw_quote",
+        "text": "所以，我现在碰到的问题就是这样的，我自己很难面面俱到的把细节都写出来。。。 但是AI给出来的就是缺少一些细节的状态。。  我理解，我需要把所有的这些我期望的东西，都记录下来，写成知识，让AI在做相关的事情时，用起来这些知识。  skills是一种方式，你们是怎么做的呢",
+        "weight": 3,
+        "source": "2026-02-28-19-10-spec-alignment-vibe-vs-sdd.md",
+        "topic": "spec-alignment-vibe-vs-sdd"
+      },
+      {
+        "type": "summary_mention",
+        "text": "Nemo shared a controlled comparison of three approaches to working with Codex on the same project: (1) dump ideas and let Codex go → shit, (2) structured docs (PRD, user stories, tech specs) → still shit, (3) self-decomposed milestones with one milestone at a time + harness engineering skills → \"得心应",
+        "weight": 2,
+        "source": "2026-03-08-18-42-milestone-requirement-alignment.md",
+        "topic": "milestone-requirement-alignment"
+      }
+    ]
+  },
+  {
+    "name": "金松",
+    "mention_count": 13,
+    "at_count": 16,
+    "topic_count": 12,
+    "topics": [
+      "knowledge-depth-vs-ai",
+      "personal-skills-from-history",
+      "skills-as-moat",
+      "docs-as-state-machines",
+      "hallucination-management",
+      "token-burn-quality",
+      "manus-acquisition",
+      "45b-token-rewrite",
+      "bmad-user-role-mismatch",
+      "agent-vs-human-quality-control"
+    ],
+    "influence": "core",
+    "influence_score": 0.895,
+    "first_seen": "2026-02-08",
+    "last_seen": "2026-03-10",
+    "total_quotes": 50,
+    "evidence": [
+      {
+        "type": "summary_mention",
+        "text": "几个值得深入的点：1) 金松说\"不能单靠一种模型\"，在核心业务逻辑区域用三种模型互相review——这是在生产环境下解决AI质量控制的实际方案；2) leo质疑同模型不同工具有何意义，摔跤吧金金解释\"antigravity的风格是很独特的，有时候它能连续给你思考半个小时\"——暗示工具层的编排（orchestration）本身就是差异化的来源；3) 两千多万的节省数字给出了AI coding ROI的具体量级参考",
+        "weight": 2,
+        "source": "2026-02-28-19-10-multi-model-review.md",
+        "topic": "multi-model-review"
+      },
+      {
+        "type": "raw_quote",
+        "text": "\"大模型最擅长的不是'描述事实'，而是'构建逻辑'。  它能给你编织一个逻辑完美、无懈可击的谎言。  如果未来我们只听它的逻辑，而忘了去窗外看一眼真实的世界。  我们可能会被困在一个由 AI 编织的、看起来很美但完全虚假的'信息茧房'里。\"",
+        "weight": 3,
+        "source": "2026-02-08-10-32-knowledge-depth-vs-ai.md",
+        "topic": "knowledge-depth-vs-ai"
+      },
+      {
+        "type": "raw_quote",
+        "text": "在It 深水区鼓捣了两个礼拜， 重构核心业务逻辑区域（原生的大模型应用）。  即使设计写的彻底， 不能单靠一种模型。 现在用了三种模型在相互review ，就三只贪吃的小耗子，在逐渐减少问题数量。",
+        "weight": 3,
+        "source": "2026-02-28-19-10-multi-model-review.md",
+        "topic": "multi-model-review"
+      },
+      {
+        "type": "summary_mention",
+        "text": "But 金松's counterpoint is equally important: the cost doesn't disappear, it shifts to prompt engineering, RAG, and agent-based checking loops",
+        "weight": 2,
+        "source": "2026-02-10-08-39-hallucination-management.md",
+        "topic": "hallucination-management"
+      },
+      {
+        "type": "summary_mention",
+        "text": "The real tension is between 胥克谦's \"management makes it work\" stance and 金松's reality of 14-16 hour days burning 370M tokens manually",
+        "weight": 2,
+        "source": "2026-02-10-08-39-token-burn-quality.md",
+        "topic": "token-burn-quality"
+      }
+    ]
+  },
+  {
+    "name": "yeka36",
+    "mention_count": 12,
+    "at_count": 23,
+    "topic_count": 10,
+    "topics": [
+      "waterfall-reborn",
+      "token-consumption-philosophy",
+      "wishing-programming",
+      "thoughtworks-consulting-model",
+      "ai-leverage-decisions",
+      "env-barrier-ai-unlock",
+      "os-llm-analogy",
+      "agent-better-than-human",
+      "vibe-sop",
+      "livestream-lessons"
+    ],
+    "influence": "core",
+    "influence_score": 0.88,
+    "first_seen": "2026-01-30",
+    "last_seen": "2026-03-20",
+    "total_quotes": 16,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "TW公司有高手，也有不少书呆子，十几年前我常去他们那儿，他们中不少人都曾是我们的作译者。熊节当年写了一本书，案例来自华为，当然是化名写法。我觉得写得不行，他又不肯修订，再加上发现他状态不大对，在任何社交平台上都是自言自语，对他人零关注（有点像王垠），我就拒掉了他的书稿。我在邮电社的合作伙伴当时有点迷信我，觉得被我拒掉的书稿也值得出，他们接过去出版了，结局有点惨：这本书让华为大怒，被华为全网追杀，全部下架收回化为纸浆，出版社欲哭无泪。我躲过一劫。",
+        "weight": 3,
+        "source": "2026-02-19-18-39-thoughtworks-consulting-model.md",
+        "topic": "thoughtworks-consulting-model"
+      },
+      {
+        "type": "raw_quote",
+        "text": "作者：最近一年我在 Google/Anthropic/OpenAI 三家烧了超过 1 万美金的 token 账单。所以本文内容基于 opus4.6 、codex-5.3-xhigh 、gemini3-pro 等最强模型不限量使用所表现出来的编码能力进行评价。",
+        "weight": 3,
+        "source": "2026-02-17-21-18-wishing-programming.md",
+        "topic": "wishing-programming"
+      },
+      {
+        "type": "raw_quote",
+        "text": "于鑫说：用过  agent teams 以后，基本不会有他做不到的感觉了。反之是一种相当巨大的俯视感。当拥有了百倍的生产力以后，对过往的所有微操都释怀了。",
+        "weight": 3,
+        "source": "2026-03-05-18-15-agent-better-than-human.md",
+        "topic": "agent-better-than-human"
+      },
+      {
+        "type": "summary_mention",
+        "text": "Also notable: yeka36's advice about presentation skills being trainable, with concrete examples from 吴军 and 邹欣",
+        "weight": 2,
+        "source": "2026-03-20-20-16-livestream-lessons.md",
+        "topic": "livestream-lessons"
+      },
+      {
+        "type": "raw_quote",
+        "text": "你大致过一遍，分几个小节，每个小节是什么内容，什么节奏，与主持人如何互动，与嘉宾如何互动，都在事前粗线条勾勒一下。这样还是会好得多。",
+        "weight": 3,
+        "source": "2026-03-20-20-16-livestream-lessons.md",
+        "topic": "livestream-lessons"
+      }
+    ]
+  },
+  {
+    "name": "郭士禄",
+    "mention_count": 11,
+    "at_count": 19,
+    "topic_count": 11,
+    "topics": [
+      "kuaishou-ai-coding-critique",
+      "ai-friendly-language",
+      "ai-tax-ubi",
+      "manus-acquisition",
+      "agent-future-infrastructure",
+      "ai-workforce-economics",
+      "agent-shopping-trust",
+      "saas-survival-ai-age",
+      "anthropic-says-vs-does",
+      "dsl-for-llm-control"
+    ],
+    "influence": "core",
+    "influence_score": 0.865,
+    "first_seen": "2026-02-09",
+    "last_seen": "2026-03-16",
+    "total_quotes": 30,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "为什么 AI 时代 SaaS 很有机会  首先得定义什么是 SaaS。SaaS 是特定行业的最佳实践的软件表达。比如 Notion 代表在线文档协同的最佳实践之一，Slack 代表组织异步协作的最佳实践之一。Salesforce, SAP 等等，也是如此。  AI 是一种新能力，是智力变成了一种可调用的能力。这对 SaaS 来说，是极其利好的。比如 Notion 有了 AI，如虎添翼。Linear 有了 AI，甚至有机会成为 人 + AI 的新时代协作工具。  确实会有一大批传统 SaaS 大概率会被淘汰掉。比如很多 CRUD 记录型的 SaaS UI 界面，复杂得人类很难用，对 AI 也非常",
+        "weight": 3,
+        "source": "2026-03-03-19-24-saas-survival-ai-age.md",
+        "topic": "saas-survival-ai-age"
+      },
+      {
+        "type": "raw_quote",
+        "text": "这个的问题根源并不是谁挣钱，谁赔钱那么简单。而是，整个社会生产分配系统，在AI的冲击下，必须要重新构建。同时，他的价值尺度，就不能仅仅以现有的货币金融体系来绝对度量。你可以简单的理解为共产主义前身。你转发的文章，已经说明了现在的一个系统性危机的可能性。",
+        "weight": 3,
+        "source": "2026-02-28-10-25-ai-workforce-economics.md",
+        "topic": "ai-workforce-economics"
+      },
+      {
+        "type": "summary_mention",
+        "text": "**郭士禄 (systems breakdown risk):** If AI automates production faster than society can redistribute wealth/redefine work, you get systemic collapse, not new equilibrium",
+        "weight": 2,
+        "source": "2026-02-28-10-25-ai-workforce-economics.md",
+        "topic": "ai-workforce-economics"
+      },
+      {
+        "type": "raw_quote",
+        "text": "https://www.youtube.com/watch?v=KqCHcPYbqPI&list=WL&index=1  我看的一个比较好的这篇论文的解读视频",
+        "weight": 3,
+        "source": "2026-03-16-09-23-context-infrastructure-depth.md",
+        "topic": "context-infrastructure-depth"
+      },
+      {
+        "type": "raw_quote",
+        "text": "抽象是有用的是因为我们给出的抽象有用，还是应该让ai这个孩子，自己去总结的抽象更好？",
+        "weight": 3,
+        "source": "2026-02-11-21-59-ai-friendly-language.md",
+        "topic": "ai-friendly-language"
+      }
+    ]
+  },
+  {
+    "name": "Lis",
+    "mention_count": 10,
+    "at_count": 11,
+    "topic_count": 10,
+    "topics": [
+      "pitch-storytelling",
+      "tdd-ai-evolution",
+      "trust-ai-ability",
+      "dsl-for-llm-control",
+      "ai-90-percent-trap",
+      "enlighten-bitter-lesson",
+      "org-around-ai-flow",
+      "ai-native-hiring",
+      "salary-complacency",
+      "pattern-copy-problem"
+    ],
+    "influence": "core",
+    "influence_score": 0.85,
+    "first_seen": "2026-01-25",
+    "last_seen": "2026-03-19",
+    "total_quotes": 14,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "我昨天遇到一个有意思的case，我让AI帮我制造一个反向的case，目的是让另一个环境上的AI来分析这个反向case的root cause  AI帮我造了一个名叫invalid-ip的case，这个invalid-ip 是因为IP设置的不对，这个名字是作为一个资源名称部署在集群中了，  结果我的analysis AI在分析的时候说，根据这个invalid-ip 的name，推测出很可能是因为IP设置的不对导致的[Facepalm]",
+        "weight": 3,
+        "source": "2026-03-05-18-15-ai-90-percent-trap.md",
+        "topic": "ai-90-percent-trap"
+      },
+      {
+        "type": "summary_mention",
+        "text": "— Gerald Weinberg Specification by Example Gojko Adzic - Exploring Requirements — Gerald Weinberg & Donald Gause   User Stories Applied Mike Cohn User Story Mapping Jeff Patton   OO 建模： Object Design: Roles, Responsibilities, and Collaborations Object-Oriented Methods: A Foundation, UML Edition Jame",
+        "weight": 2,
+        "source": "2026-03-05-18-15-enlighten-bitter-lesson.md",
+        "topic": "enlighten-bitter-lesson"
+      },
+      {
+        "type": "raw_quote",
+        "text": "就是我们去年做的固定的workflow解决某些场景问题，现在发现用cc让它自己分析还比我们的workflow效果要好",
+        "weight": 3,
+        "source": "2026-03-06-20-59-org-around-ai-flow.md",
+        "topic": "org-around-ai-flow"
+      },
+      {
+        "type": "raw_quote",
+        "text": "是的，我也有同样的感受，改来改去越改越乱，它越乱我越没底……导致我会反思自己是不是我把它带偏了[尴尬]",
+        "weight": 3,
+        "source": "2026-02-07-18-39-tdd-ai-evolution.md",
+        "topic": "tdd-ai-evolution"
+      },
+      {
+        "type": "raw_quote",
+        "text": "我们组去年基于langchain做的workflow，现在已经吃灰了，现在大家发现还是cc香",
+        "weight": 3,
+        "source": "2026-03-06-20-59-org-around-ai-flow.md",
+        "topic": "org-around-ai-flow"
+      }
+    ]
+  },
+  {
+    "name": "Teresa",
+    "mention_count": 10,
+    "at_count": 23,
+    "topic_count": 10,
+    "topics": [
+      "openness-as-moat",
+      "openness-ai-era",
+      "ai-consulting-cxo",
+      "code-as-blackbox",
+      "management-as-ai-skill",
+      "skill-driven-automation",
+      "business-anthropology-ai",
+      "10x-org-transformation",
+      "ai-team-transformation",
+      "multi-subagent-quality"
+    ],
+    "influence": "core",
+    "influence_score": 0.85,
+    "first_seen": "2026-01-25",
+    "last_seen": "2026-03-21",
+    "total_quotes": 27,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "我觉得上线卖钱的东西，首先你要做好选品，你选的东西必须是有市场的，接下来你要从用户的角度来呈现这个产品， 然后上线还要推广。       随便写个东西，那本来就是DEMO  这不是VIBE CODING的锅啊",
+        "weight": 3,
+        "source": "2026-02-08-10-32-management-as-ai-skill.md",
+        "topic": "management-as-ai-skill"
+      },
+      {
+        "type": "raw_quote",
+        "text": "很同意。我现在就是用管理团队的办法来管理AI   我跟AI说话也跟和团队说话一样的，有抛砖引玉，有鼓励，有反馈。   我当它是非常有潜力的新人同事一样的培养",
+        "weight": 3,
+        "source": "2026-02-08-10-32-management-as-ai-skill.md",
+        "topic": "management-as-ai-skill"
+      },
+      {
+        "type": "raw_quote",
+        "text": "说到这个，我想到前几天看到一个大佬说，新教经济哲学已经不适合AI时代了。我之前还看过新教伦理与资本主义精神，讲的是天主教伦理不适应工业革命了。 很有意思",
+        "weight": 3,
+        "source": "2026-02-19-18-39-business-anthropology-ai.md",
+        "topic": "business-anthropology-ai"
+      },
+      {
+        "type": "summary_mention",
+        "text": "**意识形态的过时**：Teresa 引用\"新教经济哲学已不适合 AI 时代\"，一只豆回应指出意识形态本质是\"智商有限、生命有限的人类物种对生产力和生产关系的自洽解释\"——生产力和生产关系都在快速变化，意识形态自然不适应",
+        "weight": 2,
+        "source": "2026-02-19-18-39-business-anthropology-ai.md",
+        "topic": "business-anthropology-ai"
+      },
+      {
+        "type": "raw_quote",
+        "text": "@陈明.ai 这是你的工作吗？ 我看到有人问：现在有没有一种职业能帮公司设计这些ai工作流的，对那些不懂或者不想自己研究的公司服务",
+        "weight": 3,
+        "source": "2026-03-20-08-33-ai-team-transformation.md",
+        "topic": "ai-team-transformation"
+      }
+    ]
+  },
+  {
+    "name": "摔跤吧！金金",
+    "mention_count": 12,
+    "at_count": 9,
+    "topic_count": 12,
+    "topics": [
+      "parallel-cc-ux",
+      "ai-timing-focus",
+      "methodology-over-model",
+      "method-over-model",
+      "skills-as-moat",
+      "agent-workflow-standardisation",
+      "multi-model-review",
+      "dsl-for-llm-control",
+      "lobster-org-as-digital-workforce",
+      "orchestration-as-core-skill"
+    ],
+    "influence": "core",
+    "influence_score": 0.84,
+    "first_seen": "2026-01-24",
+    "last_seen": "2026-03-15",
+    "total_quotes": 23,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "其他的AI产品都是关注于某一个领域的，就是让你做某件事做的比较专业，可以说本质上还是传统互联网工具的高级版本，龙虾的设计思路就是不限定你，你可以做任何事，是绝对开放的场景，所以面向用户群体肯定是最广泛的。这样也才像一个AI的样子。",
+        "weight": 3,
+        "source": "2026-03-15-18-39-product-lens-on-agents.md",
+        "topic": "product-lens-on-agents"
+      },
+      {
+        "type": "raw_quote",
+        "text": "antigravity 的风格是很独特的，有时候它能连续给你思考半个小时，不停的验证、推翻、修改方案再验证，应该是它内部的编排做的。",
+        "weight": 3,
+        "source": "2026-02-28-19-10-multi-model-review.md",
+        "topic": "multi-model-review"
+      },
+      {
+        "type": "raw_quote",
+        "text": "不过我觉得我们因为自己编程，就老想着让龙虾去编程，这个思路也是不对的。就像iPhone出来，不能老想着用它来打电话一样",
+        "weight": 3,
+        "source": "2026-03-07-08-45-lobster-org-as-digital-workforce.md",
+        "topic": "lobster-org-as-digital-workforce"
+      },
+      {
+        "type": "raw_quote",
+        "text": "所以我一直觉得用龙虾来编程，是理解错了龙虾的产品设计理念，专业的事情还是要用专业的工具，龙虾来指挥下倒还可以。",
+        "weight": 3,
+        "source": "2026-03-15-12-29-openclaw-cc-product-forms.md",
+        "topic": "openclaw-cc-product-forms"
+      },
+      {
+        "type": "raw_quote",
+        "text": "这个流程听起来也挺合理呀。如果这个领域的知识不是特别多，又比较完整的话，我觉得是个挺好的方案。",
+        "weight": 3,
+        "source": "2026-02-13-17-43-agent-workflow-standardisation.md",
+        "topic": "agent-workflow-standardisation"
+      }
+    ]
+  },
+  {
+    "name": "杜天微",
+    "mention_count": 9,
+    "at_count": 29,
+    "topic_count": 8,
+    "topics": [
+      "agent-skill-evolution",
+      "meta-capability-framework",
+      "agent-self-learning",
+      "skill-self-evolution",
+      "ai-friendly-language",
+      "software-as-social-science",
+      "ai-compiler-cooptimisation",
+      "ai-compiler-metaphor-debate"
+    ],
+    "influence": "core",
+    "influence_score": 0.835,
+    "first_seen": "2026-01-24",
+    "last_seen": "2026-03-08",
+    "total_quotes": 60,
+    "evidence": [
+      {
+        "type": "summary_mention",
+        "text": "杜天微 describes his project architecture: provide agents with \"meta-capabilities\" (JS execution environment, async multi-agent communication), delegate specific behaviors and decisions to LLMs",
+        "weight": 2,
+        "source": "2026-01-24-10-39-meta-capability-framework.md",
+        "topic": "meta-capability-framework"
+      },
+      {
+        "type": "summary_mention",
+        "text": "杜天微 pushed back hard, saying the metaphor is misleading — you absolutely care about output (the working software), and AI's non-determinism breaks the compiler analogy",
+        "weight": 2,
+        "source": "2026-03-08-12-32-ai-compiler-metaphor-debate.md",
+        "topic": "ai-compiler-metaphor-debate"
+      },
+      {
+        "type": "raw_quote",
+        "text": "我这个项目基本上是提供给智能体一些元能力，比如运行js的环境，多智能体之间异步通信的能力。 把具体行为和决策的能力交给大模型。大模型应该能达到人类的二三十分的水平，没有问题。剩下的就可以靠 skill补齐",
+        "weight": 3,
+        "source": "2026-01-24-10-39-meta-capability-framework.md",
+        "topic": "meta-capability-framework"
+      },
+      {
+        "type": "summary_mention",
+        "text": "关键推论：(1) 对比实验法应该取代逻辑推理法——GPT提出\"腾讯赛马\"在AI时代成本趋近于零，可以同时跑两组方案；(2) LLM可以反向为社会科学提供新方法——用AI角色模拟人类社会做受控实验；(3) 杜天微透露社会学研究者已经在用大模型做社会模拟，但受限于规模和速度",
+        "weight": 2,
+        "source": "2026-03-03-19-24-software-as-social-science.md",
+        "topic": "software-as-social-science"
+      },
+      {
+        "type": "raw_quote",
+        "text": "引入未来，就是因为 现在根本比不了。而且 AI为什么要有确定的输出。或者说 可以有，也可以没有，明明是需求决定的。你一旦比成编译器 必须有确定的输出了 那还是 AI么",
+        "weight": 3,
+        "source": "2026-03-08-12-32-ai-compiler-metaphor-debate.md",
+        "topic": "ai-compiler-metaphor-debate"
+      }
+    ]
+  },
+  {
+    "name": "于鑫",
+    "mention_count": 9,
+    "at_count": 10,
+    "topic_count": 9,
+    "topics": [
+      "agent-better-than-human",
+      "enlighten-bitter-lesson",
+      "agent-manages-better-than-people",
+      "enlighten-bitter-lesson-tension",
+      "neural-network-agent-design",
+      "neural-network-org-design",
+      "ai-transform-management",
+      "hiring-ai-era",
+      "self-contained-doc-deep-dive"
+    ],
+    "influence": "core",
+    "influence_score": 0.835,
+    "first_seen": "2026-03-05",
+    "last_seen": "2026-03-22",
+    "total_quotes": 63,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "需求分析： - Are Your Lights On? — Gerald Weinberg Specification by Example Gojko Adzic - Exploring Requirements — Gerald Weinberg & Donald Gause   User Stories Applied Mike Cohn User Story Mapping Jeff Patton   OO 建模： Object Design: Roles, Responsibilities, and Collaborations Object-Oriented Methods: A ",
+        "weight": 3,
+        "source": "2026-03-05-18-15-enlighten-bitter-lesson.md",
+        "topic": "enlighten-bitter-lesson"
+      },
+      {
+        "type": "raw_quote",
+        "text": "This is a big lesson. As a field, we still have not thoroughly learned it, as we are continuing to make the same kind of mistakes. To see this, and to effectively resist it, we have to understand the appeal of these mistakes. We have to learn the bitter lesson that building in how we think we think ",
+        "weight": 3,
+        "source": "2026-03-05-18-15-enlighten-bitter-lesson.md",
+        "topic": "enlighten-bitter-lesson"
+      },
+      {
+        "type": "summary_mention",
+        "text": "于鑫 describes his \"enlighten\" technique — invoking book titles to activate latent knowledge in Claude — then introduces Sutton's \"Bitter Lesson\" which argues that all such human-knowledge-injection approaches inevitably plateau and block further progress",
+        "weight": 2,
+        "source": "2026-03-05-18-39-enlighten-bitter-lesson-tension.md",
+        "topic": "enlighten-bitter-lesson-tension"
+      },
+      {
+        "type": "summary_mention",
+        "text": "于鑫, after burning 10 billion tokens, arrives at a striking conclusion: AI agents are easier to manage than people because they are smarter, have stronger endurance, and are loyal",
+        "weight": 2,
+        "source": "2026-03-05-18-39-agent-manages-better-than-people.md",
+        "topic": "agent-manages-better-than-people"
+      },
+      {
+        "type": "raw_quote",
+        "text": "breakthrough progress eventually arrives by an opposing approach based on scaling computation by search and learning",
+        "weight": 3,
+        "source": "2026-03-05-18-15-enlighten-bitter-lesson.md",
+        "topic": "enlighten-bitter-lesson"
+      }
+    ]
+  },
+  {
+    "name": "IQ75",
+    "mention_count": 8,
+    "at_count": 24,
+    "topic_count": 7,
+    "topics": [
+      "ai-workforce-economics",
+      "headless-cc-subagent",
+      "skill-hoarding-disease",
+      "ai-transform-management",
+      "harness-engineering-debate",
+      "openclaw-market-success",
+      "skill-as-memory-network"
+    ],
+    "influence": "core",
+    "influence_score": 0.82,
+    "first_seen": "2026-02-28",
+    "last_seen": "2026-03-18",
+    "total_quotes": 48,
+    "evidence": [
+      {
+        "type": "raw_quote",
+        "text": "还行，不算难。我列一下spec-writer的场景，你应该也能很快复刻一个：  有几个常见场景： 1. 方案设计助手：基于软件工程SOP, 帮助人类整理业务需求和产品定义，用于方案设计、会议材料准备； 2. AI编程来源：提供完整的BRD/PRD/Design spec， 用于对接AI自动编程 3. 持续迭代需求设计：生成的文档提交repo，按\"组织-项目\"管理，让需求设计持续迭代 4. 隐性信息显形: 同一问题，不同人的认知落实在spec doc里，让AI评判认知、思路差异，降低沟通成本。",
+        "weight": 3,
+        "source": "2026-03-13-19-12-ai-transform-management.md",
+        "topic": "ai-transform-management"
+      },
+      {
+        "type": "summary_mention",
+        "text": "IQ75 proposes that SKILLs are externalised memory forming a \"SkillGraph\" - a network that mirrors human associative recall, where progressive disclosure through wiki-link traversal could solve the problem of loading too many SKILLs degrading recall",
+        "weight": 2,
+        "source": "2026-03-18-03-07-skill-as-memory-network.md",
+        "topic": "skill-as-memory-network"
+      },
+      {
+        "type": "summary_mention",
+        "text": "The security concerns raised by IQ75 (companies restricting OpenClaw deployment, requiring VMs with limited network access) hint at the enterprise adoption friction that will shape this market",
+        "weight": 2,
+        "source": "2026-03-17-16-44-openclaw-market-success.md",
+        "topic": "openclaw-market-success"
+      },
+      {
+        "type": "summary_mention",
+        "text": "IQ75's SkillGraph framing is architecturally interesting - treating skills as nodes in an associative network with wiki-link syntax for on-demand traversal",
+        "weight": 2,
+        "source": "2026-03-18-03-07-skill-as-memory-network.md",
+        "topic": "skill-as-memory-network"
+      },
+      {
+        "type": "raw_quote",
+        "text": "skill本来就是很个性的东西，使用bmad或者claude code agent只是提供你一个基础模版，发挥作用还是要靠你自己基于模板定制适合自己的agent",
+        "weight": 3,
+        "source": "2026-03-12-14-26-skill-hoarding-disease.md",
+        "topic": "skill-hoarding-disease"
+      }
+    ]
+  },
+  {
+    "name": "dongxu(有时差回复慢)",
+    "mention_count": 8,
+    "at_count": 27,
+    "topic_count": 6,
+    "topics": [
+      "agent-runtime-branching",
+      "multiagent-infrastructure",
+      "ai-coding-schools",
+      "token-consumption-as-kpi",
+      "memory-md-vs-rag",
+      "memory-system-debate"
+    ],
+    "influence": "core",
+    "influence_score": 0.82,
+    "first_seen": "2026-01-27",
+    "last_seen": "2026-03-12",
+    "total_quotes": 34,
+    "evidence": [
+      {
+        "type": "summary_mention",
+        "text": "马工: 流派已经很明确了  @许式伟 的产品架构师和@dongxu(有时差回复慢) 的头狼，是一个流派  @NirVa 的CVP和我的Tri-Ownership是另外一个流派  @Player¹ 又是另外一个流派，试图让每个人都用上，我认为他会是第一个被证否的",
+        "weight": 2,
+        "source": "2026-01-29-17-01-ai-coding-schools.md",
+        "topic": "ai-coding-schools"
+      },
+      {
+        "type": "raw_quote",
+        "text": "但是给agent的就是一句话：阅读 https://mem9.ai/SKILL.md ，按照说明为 OpenClaw 安装并配置 mem9",
+        "weight": 3,
+        "source": "2026-03-12-14-26-memory-md-vs-rag.md",
+        "topic": "memory-md-vs-rag"
+      },
+      {
+        "type": "raw_quote",
+        "text": "mem9 的服务是：文件 + raw session record + rag + 全文检索 + summary + 遗忘模型",
+        "weight": 3,
+        "source": "2026-03-12-14-26-memory-md-vs-rag.md",
+        "topic": "memory-md-vs-rag"
+      },
+      {
+        "type": "summary_mention",
+        "text": "付权智 Quanzhi Fu: @dongxu(有时差回复慢) 能否请教一下这里的留下痕迹是什么意思",
+        "weight": 2,
+        "source": "2026-01-28-23-42-multiagent-infrastructure.md",
+        "topic": "multiagent-infrastructure"
+      },
+      {
+        "type": "raw_quote",
+        "text": "mem0 的问题是他们不 own 数据基础设施（云数据库）",
+        "weight": 3,
+        "source": "2026-03-12-14-26-memory-md-vs-rag.md",
+        "topic": "memory-md-vs-rag"
+      }
+    ]
+  }
+]
