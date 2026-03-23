@@ -18,14 +18,17 @@ Core principles:
 
 ## Community Voices
 
-> "The human loop ends, the self-contained doc is ready, then it's full auto."
-> — **Violet**
+> "我要求 /architect 输出的 design 一定要去 self contained 的，就是避免 /coder 分不清信息的层级乱引用其它文档。"
+> — **马工 (Ma Gong)**，2026-02-18
 
-> "The term 'self-contained doc' originated in our community — it's a technique people developed through practice."
-> — **胥克谦 (Xu Keqian)**
+> "human loop 结束了，自包含文档准备好了，然后就是全自动。"
+> — **Violet**，2026-03-20
 
-> "Self-contained docs with internal segmentation — these two things are what make Agents actually work."
-> — **leo**
+> "自包含还是咱们群里因为我们个别人提到的概念。"
+> — **胥克谦 (Xu Keqian)**，2026-03-19
+
+> "所以才有胥老师的，文档自包含，文档内自分段——这两点是让 Agent 真正能用起来的关键。"
+> — **leo**，2026-03-20
 
 ## Why It Matters
 

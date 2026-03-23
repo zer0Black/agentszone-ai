@@ -15,17 +15,14 @@ This technique was popularized by **胥克谦 (Xu Keqian)** in the community. Th
 
 ## Community Voices
 
-> "Xu's doc testing — once you try it, you never go back."
-> — **崔富泽 (Cui Fuze)**
+> "胥老师的文档测试，谁用谁爽。"
+> — **崔富泽 (Cui Fuze)**，2026-03-21
 
-> "Doc testing catches UX-level gaps that you simply can't find by writing code."
-> — **崔富泽 (Cui Fuze)**
+> "刚跑了一次工作流，确实查到些交互漏洞，这些通常都要人工体验后二次补充。"
+> — **详志 (Xiangzhi)**，2026-03-21
 
-> "It really does catch interaction-level logic flaws."
-> — **详志 (Xiangzhi)**
-
-> "Doc testing is essentially a pre-flight for UAT — moving acceptance testing forward to the documentation stage."
-> — **胥克谦 (Xu Keqian)**
+> "对的，所以我在原始文档测试方法的描述里归类在 UAT 测试的前置。"
+> — **胥克谦 (Xu Keqian)**，2026-03-21
 
 ## How To Do It
 

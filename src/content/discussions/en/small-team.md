@@ -17,7 +17,7 @@ AI is reshaping team structure. Teams that used to need 10-15 people (frontend, 
 
 ## Community Voices
 
-> "5-10 person teams using the GSD (Get Stuff Done) framework — everyone is full-stack + AI, the team is self-governing, delivering fast."
+> "5-10 人的团队用 GSD（Get Stuff Done）框架，每个人都是全栈+AI，团队自治，快速交付。"
 > — **段盼 (Duan Pan)**
 
 The community has engaged in ongoing discussion about "how teams should be structured in the AI era": traditional functional divisions are breaking down, replaced by small, delivery-oriented, autonomous units.
