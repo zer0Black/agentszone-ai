@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import { localePath } from '../../i18n/utils';
 
 export async function getStaticPaths() {
   const authors = await getCollection('authors');
@@ -92,7 +93,7 @@ const communityProfileId = author.data.influence
     <div class="mb-8 rounded-lg border border-[var(--color-surface-border)] p-4">
       <p class="text-sm text-[var(--color-text-muted)]">
         💬 查看此成员的社区画像（基于群讨论自动提取）→
-        <a href={`/community/${communityProfileId}`} class="text-[var(--color-accent)] hover:underline">
+        <a href={localePath('zh', `/community/${communityProfileId}`)} class="text-[var(--color-accent)] hover:underline">
           社区页
         </a>
       </p>
