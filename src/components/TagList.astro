@@ -13,7 +13,7 @@ const lang = getLang(Astro.currentLocale);
   {tags.map((tag) => (
     <a
       href={localePath(lang, `/tags/${tag}`)}
-      class="inline-block rounded-full border border-[var(--color-surface-border)] bg-[var(--color-surface-alt)] px-2.5 py-0.5 text-xs font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary-400)] hover:border-[var(--color-primary-500)]/50 hover:shadow-sm transition-all"
+      class="inline-block rounded-full bg-[var(--color-primary-500)]/15 px-2.5 py-0.5 text-xs font-medium text-[var(--color-primary-300)] hover:bg-[var(--color-primary-500)]/25 transition-all"
     >
       {tag}
     </a>
