@@ -223,7 +223,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           </div>
 
           {/* Title */}
-          <div style={{ marginBottom: 30 }}>
+          <div style={{ marginBottom: 30, marginTop: 80 }}>
             {titleLines.map((line, i) => (
               <div
                 key={i}
