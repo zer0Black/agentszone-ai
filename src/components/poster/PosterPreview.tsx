@@ -240,10 +240,12 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 key={i}
                 style={{
                   fontSize: 180,
-                  fontWeight: 900,
+                  fontWeight: 800,
                   color: "#ffffff",
                   lineHeight: 1.1,
-                  letterSpacing: "0.01em",
+                  letterSpacing: "0em",
+                  fontFamily: "'Noto Serif SC', 'Source Han Serif SC', serif",
+                  textShadow: "0 2px 20px rgba(0,0,0,0.3)",
                 }}
               >
                 {line}
@@ -374,9 +376,10 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                   style={{
                     fontSize: 28,
                     color: "#e8f0ff",
-                    lineHeight: 1.4,
-                    fontWeight: 600,
-                    letterSpacing: "0em",
+                    lineHeight: 1.5,
+                    fontWeight: 500,
+                    letterSpacing: "0.01em",
+                    fontFamily: "'Noto Serif SC', 'Source Han Serif SC', serif",
                   }}
                 >
                   {item}
@@ -850,9 +853,10 @@ const MinimalPoster: React.FC<Props> = ({ data, scale = 0.4 }) => {
               style={{
                 fontSize: 36,
                 color: "#2d3a4a",
-                lineHeight: 1.65,
-                fontWeight: 400,
-                letterSpacing: "0.01em",
+                lineHeight: 1.75,
+                fontWeight: 500,
+                letterSpacing: "0.02em",
+                fontFamily: "'Noto Serif SC', 'Source Han Serif SC', Georgia, serif",
               }}
             >
               {description}
