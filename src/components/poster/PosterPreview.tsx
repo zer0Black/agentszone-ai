@@ -374,7 +374,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           {/* Content items */}
           <div style={{
             marginBottom: 8,
-            marginTop: 10,
+            marginTop: 16,
             padding: "16px 20px",
           }}>
             <div
