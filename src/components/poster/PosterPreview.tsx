@@ -145,6 +145,39 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           />
         ))}
 
+        {/* Tech grid lines */}
+        <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: 0.06 }}>
+          <defs>
+            <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#4dc4ff" strokeWidth="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+
+        {/* Circuit lines */}
+        <svg style={{ position: "absolute", right: 0, top: "20%", width: "30%", height: "60%", opacity: 0.08 }}>
+          <path d="M 100 0 L 100 80 L 60 80 L 60 160 L 100 160 L 100 240 L 20 240" fill="none" stroke="#4dc4ff" strokeWidth="2"/>
+          <circle cx="100" cy="80" r="4" fill="#4dc4ff"/>
+          <circle cx="60" cy="160" r="4" fill="#4dc4ff"/>
+          <circle cx="100" cy="240" r="4" fill="#4dc4ff"/>
+          <path d="M 0 300 L 40 300 L 40 380 L 80 380" fill="none" stroke="#6b8eff" strokeWidth="1.5"/>
+        </svg>
+
+        {/* Data flow particles */}
+        <div style={{ position: "absolute", left: "5%", top: "15%", width: 3, height: 3, borderRadius: "50%", backgroundColor: "#4dc4ff", boxShadow: "0 0 10px #4dc4ff" }} />
+        <div style={{ position: "absolute", left: "12%", top: "35%", width: 2, height: 2, borderRadius: "50%", backgroundColor: "#6b8eff", boxShadow: "0 0 8px #6b8eff" }} />
+        <div style={{ position: "absolute", left: "8%", top: "55%", width: 4, height: 4, borderRadius: "50%", backgroundColor: "#4dc4ff", boxShadow: "0 0 12px #4dc4ff" }} />
+        <div style={{ position: "absolute", right: "25%", bottom: "30%", width: 2, height: 2, borderRadius: "50%", backgroundColor: "#ff9d4d", boxShadow: "0 0 8px #ff9d4d" }} />
+        <div style={{ position: "absolute", right: "30%", bottom: "45%", width: 3, height: 3, borderRadius: "50%", backgroundColor: "#4dc4ff", boxShadow: "0 0 10px #4dc4ff" }} />
+
+        {/* Hexagon pattern */}
+        <svg style={{ position: "absolute", left: "3%", bottom: "10%", width: "15%", height: "25%", opacity: 0.05 }}>
+          <polygon points="30,0 60,15 60,45 30,60 0,45 0,15" fill="none" stroke="#4dc4ff" strokeWidth="1"/>
+          <polygon points="30,40 60,55 60,85 30,100 0,85 0,55" fill="none" stroke="#4dc4ff" strokeWidth="1"/>
+          <polygon points="90,20 120,35 120,65 90,80 60,65 60,35" fill="none" stroke="#6b8eff" strokeWidth="1"/>
+        </svg>
+
         {/* Content */}
         <div
           style={{
@@ -169,46 +202,20 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
               style={{
                 width: 52,
                 height: 52,
-                borderRadius: 16,
-                background: "rgba(255,255,255,0.08)",
+                borderRadius: 12,
+                background: "linear-gradient(135deg, rgba(77,196,255,0.3), rgba(107,142,255,0.2))",
+                border: "1px solid rgba(77,196,255,0.3)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                boxShadow: "0 0 20px rgba(77,196,255,0.2)",
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  gap: 4,
-                  alignItems: "flex-end",
-                  height: 26,
-                }}
-              >
-                <div
-                  style={{
-                    width: 6,
-                    height: 11,
-                    borderRadius: 2,
-                    background: "linear-gradient(180deg, #ff6b9d, #c44dff)",
-                  }}
-                />
-                <div
-                  style={{
-                    width: 6,
-                    height: 20,
-                    borderRadius: 2,
-                    background: "linear-gradient(180deg, #6b8eff, #4dc4ff)",
-                  }}
-                />
-                <div
-                  style={{
-                    width: 6,
-                    height: 15,
-                    borderRadius: 2,
-                    background: "linear-gradient(180deg, #ff6b9d, #ff9d4d)",
-                  }}
-                />
-              </div>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4dc4ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+                <line x1="12" y1="2" x2="12" y2="22" stroke="#6b8eff" strokeWidth="1.5"/>
+              </svg>
             </div>
             <span
               style={{
@@ -249,12 +256,13 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           <div
             style={{
               position: "relative",
-              background: "rgba(80,120,220,0.12)",
+              background: "rgba(20,60,120,0.4)",
               borderRadius: 20,
               padding: "28px 40px",
               marginBottom: 32,
               marginTop: 160,
-              border: "1px solid rgba(100,160,255,0.1)",
+              border: "1px solid rgba(77,196,255,0.2)",
+              boxShadow: "0 0 30px rgba(77,196,255,0.1), inset 0 0 60px rgba(77,196,255,0.05)",
             }}
           >
             <span
@@ -319,10 +327,11 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           {/* Content items */}
           <div style={{
             marginBottom: 16,
-            background: "rgba(100,160,255,0.08)",
+            background: "rgba(20,60,120,0.4)",
             borderRadius: 16,
             padding: "16px 20px",
-            border: "1px solid rgba(100,160,255,0.15)",
+            border: "1px solid rgba(77,196,255,0.2)",
+            boxShadow: "0 0 30px rgba(77,196,255,0.1)",
           }}>
             <div
               style={{
