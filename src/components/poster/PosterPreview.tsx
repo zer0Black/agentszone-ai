@@ -249,18 +249,26 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 width: 52,
                 height: 52,
                 borderRadius: 12,
-                background: "linear-gradient(135deg, rgba(77,196,255,0.3), rgba(107,142,255,0.2))",
-                border: "1px solid rgba(77,196,255,0.3)",
+                background: "linear-gradient(135deg, rgba(77,196,255,0.25), rgba(107,142,255,0.15))",
+                border: "1px solid rgba(77,196,255,0.4)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                boxShadow: "0 0 20px rgba(77,196,255,0.2)",
+                boxShadow: "0 0 20px rgba(77,196,255,0.3), inset 0 0 15px rgba(77,196,255,0.1)",
               }}
             >
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4dc4ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="16 18 22 12 16 6"/>
-                <polyline points="8 6 2 12 8 18"/>
-                <line x1="12" y1="2" x2="12" y2="22" stroke="#6b8eff" strokeWidth="1.5"/>
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                {/* Outer hexagon */}
+                <polygon points="15,2 26,8.5 26,21.5 15,28 4,21.5 4,8.5" fill="none" stroke="#4dc4ff" strokeWidth="1.5" opacity="0.8"/>
+                {/* Inner hexagon */}
+                <polygon points="15,7 21,11 21,19 15,23 9,19 9,11" fill="rgba(77,196,255,0.15)" stroke="#6b9eff" strokeWidth="1" opacity="0.9"/>
+                {/* Center dot */}
+                <circle cx="15" cy="15" r="3" fill="#4dc4ff" opacity="0.9"/>
+                {/* Circuit lines */}
+                <line x1="15" y1="7" x2="15" y2="12" stroke="#4dc4ff" strokeWidth="1.5" opacity="0.7"/>
+                <line x1="15" y1="18" x2="15" y2="23" stroke="#4dc4ff" strokeWidth="1.5" opacity="0.7"/>
+                <line x1="9" y1="15" x2="12" y2="15" stroke="#6b9eff" strokeWidth="1.5" opacity="0.7"/>
+                <line x1="18" y1="15" x2="21" y2="15" stroke="#6b9eff" strokeWidth="1.5" opacity="0.7"/>
               </svg>
             </div>
             <span
