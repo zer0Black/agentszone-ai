@@ -324,7 +324,8 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
 
           {/* Content items */}
           <div style={{
-            marginBottom: 16,
+            marginBottom: 8,
+            marginTop: 12,
             padding: "16px 20px",
           }}>
             <div
@@ -392,7 +393,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
               justifyContent: "space-between",
               alignItems: "flex-end",
               borderTop: "1px solid rgba(255,255,255,0.08)",
-              paddingTop: 16,
+              paddingTop: 10,
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
