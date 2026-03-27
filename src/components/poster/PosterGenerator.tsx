@@ -17,7 +17,7 @@ const defaultData: PosterData = {
   guests: [
     {
       name: "陈浩",
-      title: "20年架构师，客服行业从业者",
+      title: "架构师，研发系吉普赛人，现客服行业从业者",
       subtitle: "曾从事金融、政务、财务、云计算、电商等行业",
     },
   ],
