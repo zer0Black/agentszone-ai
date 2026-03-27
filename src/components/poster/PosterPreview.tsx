@@ -535,19 +535,21 @@ const PersonCard: React.FC<{
         )}
       </div>
       <div style={{
-        fontSize: 18,
-        color: "rgba(200,215,255,0.75)",
+        fontSize: 20,
+        color: "rgba(220,230,255,0.9)",
         textAlign: "center",
         letterSpacing: "0.05em",
+        fontWeight: 500,
       }}>
         {person.title}
       </div>
       {person.subtitle && (
         <div style={{
-          fontSize: 16,
-          color: "rgba(200,215,255,0.55)",
+          fontSize: 18,
+          color: "rgba(200,215,255,0.75)",
           textAlign: "center",
           letterSpacing: "0.03em",
+          marginTop: 4,
         }}>
           {person.subtitle}
         </div>
