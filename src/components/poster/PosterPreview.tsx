@@ -371,11 +371,11 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 </div>
                 <span
                   style={{
-                    fontSize: 26,
+                    fontSize: 28,
                     color: "#e8f0ff",
                     lineHeight: 1.4,
                     fontWeight: 600,
-                    letterSpacing: "0.02em",
+                    letterSpacing: "0em",
                   }}
                 >
                   {item}
