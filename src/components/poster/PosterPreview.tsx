@@ -178,6 +178,52 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           <polygon points="90,20 120,35 120,65 90,80 60,65 60,35" fill="none" stroke="#6b8eff" strokeWidth="1"/>
         </svg>
 
+        {/* Tech ring / orbit */}
+        <svg style={{ position: "absolute", right: "8%", top: "15%", width: "20%", height: "20%", opacity: 0.12 }}>
+          <circle cx="80" cy="80" r="60" fill="none" stroke="#4dc4ff" strokeWidth="1.5" strokeDasharray="8 4"/>
+          <circle cx="80" cy="80" r="45" fill="none" stroke="#6b8eff" strokeWidth="1"/>
+          <circle cx="80" cy="20" r="5" fill="#4dc4ff"/>
+          <circle cx="140" cy="80" r="4" fill="#6b8eff"/>
+          <circle cx="80" cy="80" r="6" fill="none" stroke="#ff9d4d" strokeWidth="1.5"/>
+        </svg>
+
+        {/* Floating triangles */}
+        <svg style={{ position: "absolute", left: "6%", top: "25%", width: "8%", height: "8%", opacity: 0.08 }}>
+          <polygon points="40,0 80,70 0,70" fill="none" stroke="#4dc4ff" strokeWidth="1.5"/>
+        </svg>
+        <svg style={{ position: "absolute", right: "15%", bottom: "20%", width: "6%", height: "6%", opacity: 0.06 }}>
+          <polygon points="30,0 60,52 0,52" fill="none" stroke="#6b8eff" strokeWidth="1.5"/>
+        </svg>
+
+        {/* Diamond shapes */}
+        <svg style={{ position: "absolute", right: "5%", top: "50%", width: "5%", height: "8%", opacity: 0.08 }}>
+          <polygon points="30,0 60,30 30,60 0,30" fill="none" stroke="#4dc4ff" strokeWidth="1.5"/>
+        </svg>
+
+        {/* Star field */}
+        <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+          {[...Array(20)].map((_, i) => (
+            <div key={i} style={{
+              position: "absolute",
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              width: Math.random() * 2 + 1,
+              height: Math.random() * 2 + 1,
+              borderRadius: "50%",
+              backgroundColor: "rgba(255,255,255,0.5)",
+              animation: `twinkle ${2 + Math.random() * 3}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 2}s`,
+            }} />
+          ))}
+        </div>
+
+        <style>{`
+          @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+          }
+        `}</style>
+
         {/* Content */}
         <div
           style={{
