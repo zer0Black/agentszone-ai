@@ -101,7 +101,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           transformOrigin: "top left",
           position: "relative",
           fontFamily:
-            "'PingFang SC', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif",
+            "'Noto Serif SC', 'Source Han Serif CN', 'PingFang SC', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif",
           overflow: "hidden",
         }}
       >
@@ -213,9 +213,10 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             <span
               style={{
                 fontSize: 48,
-                fontWeight: 600,
+                fontWeight: 700,
                 color: "#ff9d4d",
-                letterSpacing: "0.03em",
+                letterSpacing: "0.08em",
+                textShadow: "0 2px 12px rgba(255,157,77,0.3)",
               }}
             >
               {forumTitle}——{episodeLabel}
@@ -229,10 +230,11 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 key={i}
                 style={{
                   fontSize: 160,
-                  fontWeight: 900,
+                  fontWeight: 800,
                   color: "#ffffff",
-                  lineHeight: 1.15,
-                  letterSpacing: "0.02em",
+                  lineHeight: 1.2,
+                  letterSpacing: "0.12em",
+                  textShadow: "0 4px 24px rgba(255,255,255,0.15)",
                 }}
               >
                 {line}
@@ -249,6 +251,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
               padding: "28px 40px",
               marginBottom: 32,
               marginTop: 160,
+              border: "1px solid rgba(100,160,255,0.1)",
             }}
           >
             <span
@@ -256,8 +259,8 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 position: "absolute",
                 top: 6,
                 left: 18,
-                fontSize: 64,
-                color: "rgba(100,180,255,0.45)",
+                fontSize: 72,
+                color: "rgba(100,180,255,0.35)",
                 fontFamily: "Georgia, serif",
                 lineHeight: 1,
                 fontWeight: 700,
@@ -268,9 +271,10 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             <div
               style={{
                 fontSize: 34,
-                color: "rgba(210,218,255,0.9)",
-                lineHeight: 1.7,
+                color: "rgba(220,228,255,0.95)",
+                lineHeight: 1.8,
                 fontWeight: 400,
+                letterSpacing: "0.02em",
               }}
             >
               {description}
@@ -278,10 +282,10 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             <span
               style={{
                 position: "absolute",
-                bottom: -12,
+                bottom: -16,
                 right: 24,
-                fontSize: 64,
-                color: "rgba(100,180,255,0.45)",
+                fontSize: 72,
+                color: "rgba(100,180,255,0.35)",
                 fontFamily: "Georgia, serif",
                 lineHeight: 1,
                 fontWeight: 700,
@@ -319,12 +323,12 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           }}>
             <div
               style={{
-                fontSize: 24,
+                fontSize: 26,
                 fontWeight: 700,
                 color: "#4dc4ff",
-                letterSpacing: "0.25em",
+                letterSpacing: "0.3em",
                 marginBottom: 24,
-                textShadow: "0 0 20px rgba(77,196,255,0.3)",
+                textShadow: "0 0 20px rgba(77,196,255,0.4)",
               }}
             >
               本 期 内 容
@@ -357,16 +361,18 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                     color: "#ffffff",
                     flexShrink: 0,
                     boxShadow: "0 4px 12px rgba(77,196,255,0.3)",
+                    letterSpacing: 0,
                   }}
                 >
                   {i + 1}
                 </div>
                 <span
                   style={{
-                    fontSize: 24,
-                    color: "rgba(210,218,255,0.95)",
-                    lineHeight: 1.5,
+                    fontSize: 26,
+                    color: "rgba(220,228,255,0.95)",
+                    lineHeight: 1.6,
                     fontWeight: 500,
+                    letterSpacing: "0.02em",
                   }}
                 >
                   {item}
@@ -476,6 +482,7 @@ const PersonCard: React.FC<{
         borderRadius: "50%",
         overflow: "hidden",
         border: "3px solid rgba(255,255,255,0.15)",
+        boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
       }}
     >
       {person.photo ? (
@@ -512,20 +519,36 @@ const PersonCard: React.FC<{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: 4,
+        gap: 6,
       }}
     >
-      <div style={{ fontSize: 30, fontWeight: 700, color: "#ffffff" }}>
+      <div style={{
+        fontSize: 34,
+        fontWeight: 700,
+        color: "#ffffff",
+        letterSpacing: "0.1em",
+        textShadow: "0 2px 12px rgba(255,255,255,0.2)",
+      }}>
         {person.name}
         {person.nameCn && (
           <span style={{ color: "#ff9d4d" }}> {person.nameCn}</span>
         )}
       </div>
-      <div style={{ fontSize: 17, color: "rgba(210,218,255,0.65)", textAlign: "center" }}>
+      <div style={{
+        fontSize: 18,
+        color: "rgba(200,215,255,0.75)",
+        textAlign: "center",
+        letterSpacing: "0.05em",
+      }}>
         {person.title}
       </div>
       {person.subtitle && (
-        <div style={{ fontSize: 16, color: "rgba(210,218,255,0.5)", textAlign: "center" }}>
+        <div style={{
+          fontSize: 16,
+          color: "rgba(200,215,255,0.55)",
+          textAlign: "center",
+          letterSpacing: "0.03em",
+        }}>
           {person.subtitle}
         </div>
       )}
