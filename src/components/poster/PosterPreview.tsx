@@ -101,7 +101,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           transformOrigin: "top left",
           position: "relative",
           fontFamily:
-            "'Noto Serif SC', 'Source Han Serif CN', 'PingFang SC', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif",
+            "'SF Pro Display', 'DIN Alternate', 'Roboto', 'Noto Sans SC', 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif",
           overflow: "hidden",
         }}
       >
@@ -214,9 +214,12 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
               style={{
                 fontSize: 48,
                 fontWeight: 700,
-                color: "#ff9d4d",
-                letterSpacing: "0.08em",
-                textShadow: "0 2px 12px rgba(255,157,77,0.3)",
+                background: "linear-gradient(90deg, #ff9d4d, #ffc87d)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                letterSpacing: "0.1em",
+                filter: "drop-shadow(0 2px 16px rgba(255,157,77,0.4))",
               }}
             >
               {forumTitle}——{episodeLabel}
@@ -231,10 +234,13 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 style={{
                   fontSize: 160,
                   fontWeight: 800,
-                  color: "#ffffff",
+                  background: "linear-gradient(180deg, #ffffff 0%, #a8c8ff 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
                   lineHeight: 1.2,
-                  letterSpacing: "0.12em",
-                  textShadow: "0 4px 24px rgba(255,255,255,0.15)",
+                  letterSpacing: "0.15em",
+                  filter: "drop-shadow(0 4px 24px rgba(100,160,255,0.5))",
                 }}
               >
                 {line}
@@ -271,7 +277,10 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             <div
               style={{
                 fontSize: 38,
-                color: "rgba(220,228,255,0.95)",
+                background: "linear-gradient(90deg, rgba(180,200,255,1), rgba(140,180,255,0.9))",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
                 lineHeight: 1.8,
                 fontWeight: 400,
                 letterSpacing: "0.02em",
@@ -324,10 +333,13 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
               style={{
                 fontSize: 24,
                 fontWeight: 700,
-                color: "#4dc4ff",
-                letterSpacing: "0.3em",
+                background: "linear-gradient(90deg, #4dc4ff, #6b9eff)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                letterSpacing: "0.35em",
                 marginBottom: 20,
-                textShadow: "0 0 20px rgba(77,196,255,0.4)",
+                filter: "drop-shadow(0 0 12px rgba(77,196,255,0.5))",
               }}
             >
               本 期 内 容
@@ -359,7 +371,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                     fontWeight: 800,
                     color: "#ffffff",
                     flexShrink: 0,
-                    boxShadow: "0 4px 12px rgba(77,196,255,0.3)",
+                    boxShadow: "0 4px 16px rgba(77,196,255,0.5)",
                     letterSpacing: 0,
                   }}
                 >
@@ -368,7 +380,10 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 <span
                   style={{
                     fontSize: 24,
-                    color: "rgba(220,228,255,0.95)",
+                    background: "linear-gradient(90deg, rgba(220,228,255,1), rgba(180,210,255,0.9))",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
                     lineHeight: 1.5,
                     fontWeight: 500,
                     letterSpacing: "0.02em",
@@ -408,7 +423,16 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 </svg>
               </div>
               <span
-                style={{ fontSize: 28, fontWeight: 700, color: "#ffffff", letterSpacing: "0.05em" }}
+                style={{
+                  fontSize: 28,
+                  fontWeight: 700,
+                  background: "linear-gradient(90deg, #ffffff, #a8ffcc)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  letterSpacing: "0.05em",
+                  filter: "drop-shadow(0 2px 8px rgba(74,222,128,0.3))",
+                }}
               >
                 {date}
               </span>
@@ -457,8 +481,12 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                     style={{
                       fontSize: 30,
                       fontWeight: 700,
-                      color: "#ffffff",
-                      letterSpacing: "0.05em",
+                      background: "linear-gradient(90deg, #ffffff, #a8c8ff)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                      letterSpacing: "0.08em",
+                      filter: "drop-shadow(0 2px 8px rgba(100,160,255,0.3))",
                     }}
                   >
                     {meetingId}
@@ -535,18 +563,24 @@ const PersonCard: React.FC<{
       <div style={{
         fontSize: 34,
         fontWeight: 700,
-        color: "#ffffff",
+        background: "linear-gradient(90deg, #ffffff, #ffc87d)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
         letterSpacing: "0.1em",
-        textShadow: "0 2px 12px rgba(255,255,255,0.2)",
+        filter: "drop-shadow(0 2px 12px rgba(255,200,100,0.3))",
       }}>
         {person.name}
         {person.nameCn && (
-          <span style={{ color: "#ff9d4d" }}> {person.nameCn}</span>
+          <span style={{ background: "linear-gradient(90deg, #ff9d4d, #ffc87d)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}> {person.nameCn}</span>
         )}
       </div>
       <div style={{
         fontSize: 20,
-        color: "rgba(220,230,255,0.9)",
+        background: "linear-gradient(90deg, rgba(200,220,255,1), rgba(160,200,255,0.9))",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
         textAlign: "center",
         letterSpacing: "0.05em",
         fontWeight: 500,
@@ -556,7 +590,10 @@ const PersonCard: React.FC<{
       {person.subtitle && (
         <div style={{
           fontSize: 18,
-          color: "rgba(200,215,255,0.75)",
+          background: "linear-gradient(90deg, rgba(180,200,255,0.9), rgba(140,180,255,0.8))",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
           textAlign: "center",
           letterSpacing: "0.03em",
           marginTop: 4,
