@@ -262,8 +262,8 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
               padding: "28px 40px",
               marginBottom: 32,
               marginTop: 160,
-              border: "1px solid rgba(77,196,255,0.35)",
-              boxShadow: "0 0 40px rgba(77,196,255,0.2), inset 0 0 80px rgba(77,196,255,0.08)",
+              border: "none",
+              boxShadow: "inset 0 0 60px rgba(77,196,255,0.05)",
             }}
           >
             <span
