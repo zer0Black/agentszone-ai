@@ -351,13 +351,9 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 key={i}
                 style={{
                   display: "flex",
-                  alignItems: "flex-start",
-                  gap: 12,
-                  marginBottom: 10,
-                  background: "rgba(255,255,255,0.04)",
-                  borderRadius: 8,
-                  padding: "10px 14px",
-                  border: "1px solid rgba(255,255,255,0.06)",
+                  alignItems: "center",
+                  gap: 14,
+                  marginBottom: 12,
                 }}
               >
                 <div
@@ -373,15 +369,13 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                     fontWeight: 800,
                     color: "#ffffff",
                     flexShrink: 0,
-                    boxShadow: "0 4px 12px rgba(77,196,255,0.4)",
-                    letterSpacing: 0,
                   }}
                 >
                   {i + 1}
                 </div>
                 <span
                   style={{
-                    fontSize: 24,
+                    fontSize: 26,
                     color: "#e8f0ff",
                     lineHeight: 1.4,
                     fontWeight: 600,
