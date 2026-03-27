@@ -560,7 +560,10 @@ const PersonCard: React.FC<{
       <div style={{
         fontSize: 38,
         fontWeight: 700,
-        color: "#ffffff",
+        background: "linear-gradient(90deg, #ff9d4d, #ffc87d)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
         letterSpacing: "0.1em",
       }}>
         {person.name}
