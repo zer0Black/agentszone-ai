@@ -212,7 +212,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             </div>
             <span
               style={{
-                fontSize: 36,
+                fontSize: 48,
                 fontWeight: 600,
                 color: "#ff9d4d",
                 letterSpacing: "0.03em",
