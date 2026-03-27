@@ -329,6 +329,8 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             marginBottom: 8,
             marginTop: 10,
             padding: "16px 20px",
+            border: "1px dashed rgba(77,196,255,0.25)",
+            borderRadius: 12,
           }}>
             <div
               style={{
@@ -348,10 +350,6 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
-                  border: "2px solid rgba(77,196,255,0.7)",
-                  borderRadius: 6,
-                  padding: "4px 14px",
-                  display: "inline-block",
                   filter: "drop-shadow(0 0 12px rgba(77,196,255,0.5))",
                 }}
               >
