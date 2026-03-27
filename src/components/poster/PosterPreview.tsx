@@ -257,13 +257,13 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           <div
             style={{
               position: "relative",
-              background: "rgba(20,60,120,0.4)",
+              background: "rgba(10,40,100,0.55)",
               borderRadius: 20,
               padding: "28px 40px",
               marginBottom: 32,
               marginTop: 160,
-              border: "1px solid rgba(77,196,255,0.2)",
-              boxShadow: "0 0 30px rgba(77,196,255,0.1), inset 0 0 60px rgba(77,196,255,0.05)",
+              border: "1px solid rgba(77,196,255,0.35)",
+              boxShadow: "0 0 40px rgba(77,196,255,0.2), inset 0 0 80px rgba(77,196,255,0.08)",
             }}
           >
             <span
@@ -271,8 +271,8 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 position: "absolute",
                 top: 6,
                 left: 18,
-                fontSize: 72,
-                color: "rgba(100,180,255,0.35)",
+                fontSize: 80,
+                color: "rgba(100,180,255,0.4)",
                 fontFamily: "Georgia, serif",
                 lineHeight: 1,
                 fontWeight: 700,
