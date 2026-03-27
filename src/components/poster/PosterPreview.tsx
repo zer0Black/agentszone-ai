@@ -329,16 +329,10 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             <div
               style={{
                 fontSize: 46,
-                background: "linear-gradient(135deg, #e8f0ff 0%, #b8d4ff 50%, #d0e8ff 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-                lineHeight: 2.15,
+                color: "#e8f0ff",
+                lineHeight: 2,
                 fontWeight: 600,
-                fontStyle: "italic",
                 letterSpacing: "0.01em",
-                fontFamily: "'Nunito', 'Quicksand', 'DIN Alternate', 'Roboto Rounded', sans-serif",
-                filter: "drop-shadow(0 0 16px rgba(100,160,255,0.35))",
               }}
             >
               {description}
