@@ -366,14 +366,10 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div
-                style={{
-                  width: 12,
-                  height: 12,
-                  borderRadius: "50%",
-                  backgroundColor: "#4ade80",
-                }}
-              />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
               <span
                 style={{ fontSize: 26, fontWeight: 700, color: "#ffffff" }}
               >
