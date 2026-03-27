@@ -309,14 +309,22 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           </div>
 
           {/* Content items */}
-          <div style={{ marginBottom: 36, marginTop: "auto" }}>
+          <div style={{
+            marginBottom: 36,
+            marginTop: "auto",
+            background: "rgba(100,160,255,0.08)",
+            borderRadius: 20,
+            padding: "28px 32px",
+            border: "1px solid rgba(100,160,255,0.15)",
+          }}>
             <div
               style={{
-                fontSize: 22,
+                fontSize: 24,
                 fontWeight: 700,
-                color: "#ff9d4d",
-                letterSpacing: "0.2em",
-                marginBottom: 20,
+                color: "#4dc4ff",
+                letterSpacing: "0.25em",
+                marginBottom: 24,
+                textShadow: "0 0 20px rgba(77,196,255,0.3)",
               }}
             >
               本 期 内 容
@@ -327,25 +335,38 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 style={{
                   display: "flex",
                   alignItems: "flex-start",
-                  gap: 12,
-                  marginBottom: 14,
+                  gap: 16,
+                  marginBottom: 18,
+                  background: "rgba(255,255,255,0.04)",
+                  borderRadius: 12,
+                  padding: "14px 18px",
+                  border: "1px solid rgba(255,255,255,0.06)",
                 }}
               >
-                <span
+                <div
                   style={{
-                    fontSize: 20,
-                    color: "#ff9d4d",
-                    lineHeight: 1.5,
+                    width: 36,
+                    height: 36,
+                    borderRadius: 10,
+                    background: "linear-gradient(135deg, #4dc4ff, #6b8eff)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: 18,
+                    fontWeight: 800,
+                    color: "#ffffff",
                     flexShrink: 0,
+                    boxShadow: "0 4px 12px rgba(77,196,255,0.3)",
                   }}
                 >
-                  ●
-                </span>
+                  {i + 1}
+                </div>
                 <span
                   style={{
-                    fontSize: 22,
-                    color: "rgba(210,218,255,0.85)",
+                    fontSize: 24,
+                    color: "rgba(210,218,255,0.95)",
                     lineHeight: 1.5,
+                    fontWeight: 500,
                   }}
                 >
                   {item}
