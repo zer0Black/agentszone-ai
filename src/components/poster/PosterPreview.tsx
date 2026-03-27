@@ -597,7 +597,7 @@ const PersonCard: React.FC<{
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: "center top",
+            objectPosition: "center 30%",
           }}
         />
       ) : (
@@ -1141,7 +1141,7 @@ const MinimalPersonCard: React.FC<{
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: "center top",
+            objectPosition: "center 30%",
           }}
         />
       ) : (
@@ -1676,7 +1676,7 @@ const GlassPersonCard: React.FC<{
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: "center top",
+            objectPosition: "center 30%",
           }}
         />
       ) : (
