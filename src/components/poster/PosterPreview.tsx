@@ -325,11 +325,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           {/* Content items */}
           <div style={{
             marginBottom: 16,
-            background: "rgba(20,60,120,0.4)",
-            borderRadius: 16,
             padding: "16px 20px",
-            border: "1px solid rgba(77,196,255,0.2)",
-            boxShadow: "0 0 30px rgba(77,196,255,0.1)",
           }}>
             <div
               style={{
