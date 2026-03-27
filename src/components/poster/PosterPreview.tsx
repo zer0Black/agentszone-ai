@@ -416,17 +416,18 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
               >
                 <div
                   style={{
-                    width: 28,
-                    height: 28,
-                    borderRadius: 6,
-                    background: "linear-gradient(135deg, #4dc4ff, #6b8eff)",
+                    width: 32,
+                    height: 32,
+                    borderRadius: 8,
+                    background: "linear-gradient(135deg, #ffd700, #ffaa00)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: 14,
-                    fontWeight: 800,
-                    color: "#ffffff",
+                    fontSize: 18,
+                    fontWeight: 900,
+                    color: "#1a1a2e",
                     flexShrink: 0,
+                    boxShadow: "0 2px 12px rgba(255,180,0,0.5)",
                   }}
                 >
                   {i + 1}
