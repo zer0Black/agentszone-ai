@@ -18,7 +18,7 @@ const query = new URLSearchParams({
   meetingId: posterData.meetingId
 }).toString();
 
-const url = `http://localhost:4321/poster?${query}`;
+const url = `http://localhost:4322/poster?${query}`;
 
 console.log('Navigating to:', url);
 
