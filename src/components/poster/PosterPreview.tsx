@@ -328,12 +328,12 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             </span>
             <div
               style={{
-                fontSize: 42,
+                fontSize: 46,
                 background: "linear-gradient(135deg, #e8f0ff 0%, #b8d4ff 50%, #d0e8ff 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
-                lineHeight: 2,
+                lineHeight: 2.1,
                 fontWeight: 600,
                 letterSpacing: "0.01em",
                 filter: "drop-shadow(0 0 16px rgba(100,160,255,0.35))",
