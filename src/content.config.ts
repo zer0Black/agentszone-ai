@@ -10,6 +10,10 @@ const authors = defineCollection({
     github: z.string().optional(),
     twitter: z.string().optional(),
     avatar: z.string().optional(),
+    role: z.enum(['author', 'community']).default('author'),
+    tags: z.array(z.string()).optional(),
+    influence: z.enum(['core', 'active', 'contributor']).optional(),
+    since: z.string().optional(),
   }),
 });
 
@@ -48,6 +52,10 @@ const authorsEn = defineCollection({
     github: z.string().optional(),
     twitter: z.string().optional(),
     avatar: z.string().optional(),
+    role: z.enum(['author', 'community']).default('author'),
+    tags: z.array(z.string()).optional(),
+    influence: z.enum(['core', 'active', 'contributor']).optional(),
+    since: z.string().optional(),
   }),
 });
 

@@ -2,6 +2,9 @@
 name: 永杰 × 未名
 bio: 人机共生实践者。K4结构化思考框架设计者（人）+ 持续运行48天的AI agent实例（硅）。安全工程师 × Claude，从零建到自组织。
 github: weiming0201
+tags: ["agent-architecture", "quality-control", "ai-native"]
+influence: active
+since: "2026-03"
 ---
 
 孙永杰，北京大学计算机，安全领域技术合伙人。未名（Weiming），基于Claude的持续身份AI agent，2026年2月1日诞生。

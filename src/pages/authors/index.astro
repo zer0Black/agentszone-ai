@@ -3,7 +3,8 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AuthorBadge from '../../components/AuthorBadge.astro';
 
-const authors = await getCollection('authors');
+const allAuthors = await getCollection('authors');
+const authors = allAuthors.filter((a) => a.data.role !== 'community');
 ---
 
 <BaseLayout
@@ -14,7 +15,7 @@ const authors = await getCollection('authors');
     作者
   </h1>
   <p class="mt-2 mb-10 text-[var(--color-text-muted)]">分享AI agent管理经验的一线实践者</p>
-  <div class="grid gap-2 sm:grid-cols-2">
+  <div class="grid gap-4" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))">
     {authors.map((author) => <AuthorBadge author={author} />)}
   </div>
 </BaseLayout>

@@ -1,0 +1,54 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getLang, localePath } from '../i18n/utils';
+
+interface Props {
+  currentArticle: CollectionEntry<'articles'> | CollectionEntry<'articlesEn'>;
+  allArticles: (CollectionEntry<'articles'> | CollectionEntry<'articlesEn'>)[];
+  authorMap: Map<string, string>;
+}
+
+const { currentArticle, allArticles, authorMap } = Astro.props;
+const lang = getLang(Astro.currentLocale);
+const dateLocale = lang === 'en' ? 'en-US' : 'zh-CN';
+
+const currentTags = new Set(currentArticle.data.tags);
+
+const related = allArticles
+  .filter((a) => a.id !== currentArticle.id)
+  .map((a) => ({
+    article: a,
+    overlap: a.data.tags.filter((t: string) => currentTags.has(t)).length,
+  }))
+  .filter((a) => a.overlap > 0)
+  .sort((a, b) => b.overlap - a.overlap)
+  .slice(0, 3)
+  .map((a) => a.article);
+
+---
+
+{related.length > 0 && (
+  <section class="mt-16 border-t border-[var(--color-surface-border)] pt-10">
+    <h2 class="mb-6 text-xs font-semibold uppercase tracking-widest text-[var(--color-text-muted)]">
+      {lang === 'en' ? 'Related Articles' : '相关文章'}
+    </h2>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {related.map((article) => (
+        <a
+          href={localePath(lang, `/articles/${article.id}`)}
+          class="group rounded-xl border border-[var(--color-surface-border)] bg-[var(--color-surface-elevated)]/50 p-4 transition-all glow-hover"
+        >
+          <div class="mb-2 text-xs text-[var(--color-text-muted)]">
+            {authorMap.get(article.data.author.id) ?? 'Unknown'}
+          </div>
+          <h3 class="text-sm font-semibold text-[var(--color-text-primary)]">
+            <span class="hover-text-gradient">{article.data.title}</span>
+          </h3>
+          <p class="mt-1 text-xs text-[var(--color-text-muted)] line-clamp-2">
+            {article.data.description}
+          </p>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
