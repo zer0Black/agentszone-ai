@@ -57,7 +57,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
   } = data;
 
   const episodeLabel = `第${numberToChinese(episodeNumber)}期`;
-  const photoSize = guests.length === 1 ? 280 : guests.length === 2 ? 220 : 170;
+  const photoSize = guests.length === 1 ? 240 : guests.length === 2 ? 190 : 150;
   const titleLines = title.split("\n");
 
   if (style === "minimal") {
@@ -101,7 +101,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           transformOrigin: "top left",
           position: "relative",
           fontFamily:
-            "'PingFang SC', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif",
+            "'Noto Serif SC', 'Source Han Serif SC', 'STSongti', 'SimSun', 'Georgia', serif",
           overflow: "hidden",
         }}
       >
@@ -111,7 +111,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(170deg, #2a1a5e 0%, #1e1565 20%, #191060 40%, #14104a 65%, #0e0c38 100%)",
+              "linear-gradient(170deg, #0a2a5e 0%, #0e3a6e 20%, #0a2a5e 40%, #061845 65%, #041238 100%)",
           }}
         />
 
@@ -124,7 +124,7 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             width: 500,
             height: 500,
             background:
-              "radial-gradient(circle, rgba(100,60,200,0.25) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(60,120,200,0.3) 0%, transparent 70%)",
             borderRadius: "50%",
           }}
         />
@@ -144,6 +144,85 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             }}
           />
         ))}
+
+        {/* Tech grid lines */}
+        <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: 0.06 }}>
+          <defs>
+            <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#4dc4ff" strokeWidth="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+
+        {/* Circuit lines */}
+        <svg style={{ position: "absolute", right: 0, top: "20%", width: "30%", height: "60%", opacity: 0.08 }}>
+          <path d="M 100 0 L 100 80 L 60 80 L 60 160 L 100 160 L 100 240 L 20 240" fill="none" stroke="#4dc4ff" strokeWidth="2"/>
+          <circle cx="100" cy="80" r="4" fill="#4dc4ff"/>
+          <circle cx="60" cy="160" r="4" fill="#4dc4ff"/>
+          <circle cx="100" cy="240" r="4" fill="#4dc4ff"/>
+          <path d="M 0 300 L 40 300 L 40 380 L 80 380" fill="none" stroke="#6b8eff" strokeWidth="1.5"/>
+        </svg>
+
+        {/* Data flow particles */}
+        <div style={{ position: "absolute", left: "5%", top: "15%", width: 3, height: 3, borderRadius: "50%", backgroundColor: "#4dc4ff", boxShadow: "0 0 10px #4dc4ff" }} />
+        <div style={{ position: "absolute", left: "12%", top: "35%", width: 2, height: 2, borderRadius: "50%", backgroundColor: "#6b8eff", boxShadow: "0 0 8px #6b8eff" }} />
+        <div style={{ position: "absolute", left: "8%", top: "55%", width: 4, height: 4, borderRadius: "50%", backgroundColor: "#4dc4ff", boxShadow: "0 0 12px #4dc4ff" }} />
+        <div style={{ position: "absolute", right: "25%", bottom: "30%", width: 2, height: 2, borderRadius: "50%", backgroundColor: "#ff9d4d", boxShadow: "0 0 8px #ff9d4d" }} />
+        <div style={{ position: "absolute", right: "30%", bottom: "45%", width: 3, height: 3, borderRadius: "50%", backgroundColor: "#4dc4ff", boxShadow: "0 0 10px #4dc4ff" }} />
+
+        {/* Hexagon pattern */}
+        <svg style={{ position: "absolute", left: "3%", bottom: "10%", width: "15%", height: "25%", opacity: 0.05 }}>
+          <polygon points="30,0 60,15 60,45 30,60 0,45 0,15" fill="none" stroke="#4dc4ff" strokeWidth="1"/>
+          <polygon points="30,40 60,55 60,85 30,100 0,85 0,55" fill="none" stroke="#4dc4ff" strokeWidth="1"/>
+          <polygon points="90,20 120,35 120,65 90,80 60,65 60,35" fill="none" stroke="#6b8eff" strokeWidth="1"/>
+        </svg>
+
+        {/* Tech ring / orbit */}
+        <svg style={{ position: "absolute", right: "8%", top: "15%", width: "20%", height: "20%", opacity: 0.12 }}>
+          <circle cx="80" cy="80" r="60" fill="none" stroke="#4dc4ff" strokeWidth="1.5" strokeDasharray="8 4"/>
+          <circle cx="80" cy="80" r="45" fill="none" stroke="#6b8eff" strokeWidth="1"/>
+          <circle cx="80" cy="20" r="5" fill="#4dc4ff"/>
+          <circle cx="140" cy="80" r="4" fill="#6b8eff"/>
+          <circle cx="80" cy="80" r="6" fill="none" stroke="#ff9d4d" strokeWidth="1.5"/>
+        </svg>
+
+        {/* Floating triangles */}
+        <svg style={{ position: "absolute", left: "6%", top: "25%", width: "8%", height: "8%", opacity: 0.08 }}>
+          <polygon points="40,0 80,70 0,70" fill="none" stroke="#4dc4ff" strokeWidth="1.5"/>
+        </svg>
+        <svg style={{ position: "absolute", right: "15%", bottom: "20%", width: "6%", height: "6%", opacity: 0.06 }}>
+          <polygon points="30,0 60,52 0,52" fill="none" stroke="#6b8eff" strokeWidth="1.5"/>
+        </svg>
+
+        {/* Diamond shapes */}
+        <svg style={{ position: "absolute", right: "5%", top: "50%", width: "5%", height: "8%", opacity: 0.08 }}>
+          <polygon points="30,0 60,30 30,60 0,30" fill="none" stroke="#4dc4ff" strokeWidth="1.5"/>
+        </svg>
+
+        {/* Star field */}
+        <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+          {[...Array(20)].map((_, i) => (
+            <div key={i} style={{
+              position: "absolute",
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              width: Math.random() * 2 + 1,
+              height: Math.random() * 2 + 1,
+              borderRadius: "50%",
+              backgroundColor: "rgba(255,255,255,0.5)",
+              animation: `twinkle ${2 + Math.random() * 3}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 2}s`,
+            }} />
+          ))}
+        </div>
+
+        <style>{`
+          @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+          }
+        `}</style>
 
         {/* Content */}
         <div
@@ -167,55 +246,57 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           >
             <div
               style={{
-                width: 52,
-                height: 52,
-                borderRadius: 16,
-                background: "rgba(255,255,255,0.08)",
+                width: 60,
+                height: 60,
+                borderRadius: 14,
+                background: "linear-gradient(135deg, rgba(77,196,255,0.35), rgba(107,142,255,0.2))",
+                border: "none",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                boxShadow: "0 0 40px rgba(0,229,255,0.6), inset 0 0 25px rgba(0,229,255,0.2)",
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  gap: 4,
-                  alignItems: "flex-end",
-                  height: 26,
-                }}
-              >
-                <div
-                  style={{
-                    width: 6,
-                    height: 11,
-                    borderRadius: 2,
-                    background: "linear-gradient(180deg, #ff6b9d, #c44dff)",
-                  }}
-                />
-                <div
-                  style={{
-                    width: 6,
-                    height: 20,
-                    borderRadius: 2,
-                    background: "linear-gradient(180deg, #6b8eff, #4dc4ff)",
-                  }}
-                />
-                <div
-                  style={{
-                    width: 6,
-                    height: 15,
-                    borderRadius: 2,
-                    background: "linear-gradient(180deg, #ff6b9d, #ff9d4d)",
-                  }}
-                />
-              </div>
+              <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+                {/* Robot head */}
+                <rect x="8" y="9" width="22" height="18" rx="4" fill="rgba(0,229,255,0.25)" stroke="#00e5ff" strokeWidth="3" filter="url(#glow)"/>
+                {/* Eyes - bright glowing */}
+                <circle cx="15" cy="17" r="3.5" fill="#ffffff" filter="url(#glow)"/>
+                <circle cx="23" cy="17" r="3.5" fill="#ffffff" filter="url(#glow)"/>
+                <circle cx="15" cy="17" r="1.8" fill="#00e5ff"/>
+                <circle cx="23" cy="17" r="1.8" fill="#00e5ff"/>
+                {/* Antenna */}
+                <line x1="19" y1="9" x2="19" y2="4" stroke="#00e5ff" strokeWidth="3"/>
+                <circle cx="19" cy="3" r="3" fill="#00e5ff" filter="url(#glow)"/>
+                {/* Ears */}
+                <rect x="3" y="13" width="5" height="10" rx="2" fill="rgba(0,229,255,0.3)" stroke="#00e5ff" strokeWidth="2.5"/>
+                <rect x="30" y="13" width="5" height="10" rx="2" fill="rgba(0,229,255,0.3)" stroke="#00e5ff" strokeWidth="2.5"/>
+                {/* Mouth */}
+                <line x1="13" y1="23" x2="25" y2="23" stroke="#00e5ff" strokeWidth="3" strokeLinecap="round"/>
+                {/* Body hint */}
+                <rect x="12" y="27" width="14" height="6" rx="2.5" fill="rgba(0,229,255,0.25)" stroke="#00e5ff" strokeWidth="2.5"/>
+                {/* Glow filter */}
+                <defs>
+                  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+                    <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                    <feMerge>
+                      <feMergeNode in="blur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+              </svg>
             </div>
             <span
               style={{
-                fontSize: 28,
-                fontWeight: 600,
-                color: "#ff9d4d",
-                letterSpacing: "0.03em",
+                fontSize: 56,
+                fontWeight: 800,
+                background: "linear-gradient(90deg, #ff9d4d, #ffc87d)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                letterSpacing: "0.1em",
+                filter: "drop-shadow(0 2px 16px rgba(255,157,77,0.4))",
               }}
             >
               {forumTitle}——{episodeLabel}
@@ -223,16 +304,18 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           </div>
 
           {/* Title */}
-          <div style={{ marginBottom: 30 }}>
+          <div style={{ marginBottom: 30, marginTop: 80 }}>
             {titleLines.map((line, i) => (
               <div
                 key={i}
                 style={{
-                  fontSize: 88,
+                  fontSize: 180,
                   fontWeight: 900,
                   color: "#ffffff",
-                  lineHeight: 1.15,
-                  letterSpacing: "0.02em",
+                  lineHeight: 1.1,
+                  letterSpacing: "0em",
+                  fontFamily: "'Noto Serif SC', 'Source Han Serif SC', serif",
+                  textShadow: "0 2px 20px rgba(0,0,0,0.3)",
                 }}
               >
                 {line}
@@ -244,10 +327,13 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           <div
             style={{
               position: "relative",
-              background: "rgba(80,120,220,0.12)",
+              background: "rgba(10,40,100,0.55)",
               borderRadius: 20,
               padding: "28px 40px",
               marginBottom: 32,
+              marginTop: 70,
+              border: "none",
+              boxShadow: "inset 0 0 60px rgba(77,196,255,0.05)",
             }}
           >
             <span
@@ -255,8 +341,8 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 position: "absolute",
                 top: 6,
                 left: 18,
-                fontSize: 64,
-                color: "rgba(100,180,255,0.45)",
+                fontSize: 80,
+                color: "rgba(100,180,255,0.4)",
                 fontFamily: "Georgia, serif",
                 lineHeight: 1,
                 fontWeight: 700,
@@ -266,10 +352,12 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             </span>
             <div
               style={{
-                fontSize: 34,
-                color: "rgba(210,218,255,0.9)",
-                lineHeight: 1.7,
-                fontWeight: 400,
+                fontSize: 46,
+                color: "#e8f0ff",
+                lineHeight: 2,
+                fontWeight: 700,
+                fontStyle: "italic",
+                letterSpacing: "0.01em",
               }}
             >
               {description}
@@ -277,10 +365,10 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
             <span
               style={{
                 position: "absolute",
-                bottom: -12,
+                bottom: -16,
                 right: 24,
-                fontSize: 64,
-                color: "rgba(100,180,255,0.45)",
+                fontSize: 72,
+                color: "rgba(100,180,255,0.35)",
                 fontFamily: "Georgia, serif",
                 lineHeight: 1,
                 fontWeight: 700,
@@ -308,43 +396,72 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           </div>
 
           {/* Content items */}
-          <div style={{ marginBottom: 36, marginTop: "auto" }}>
+          <div style={{
+            marginBottom: 8,
+            marginTop: 12,
+            padding: "16px 20px",
+          }}>
             <div
               style={{
-                fontSize: 22,
+                fontSize: 28,
                 fontWeight: 700,
-                color: "#ff9d4d",
-                letterSpacing: "0.2em",
-                marginBottom: 20,
-              }}
+                background: "linear-gradient(90deg, #4dc4ff, #6b9eff)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              letterSpacing: "0.3em",
+              marginBottom: 14,
+            }}
             >
-              本 期 内 容
+              <span
+                style={{
+                  background: "linear-gradient(90deg, #ffd700, #ffaa00)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  filter: "drop-shadow(0 0 12px rgba(255,180,0,0.5))",
+                }}
+              >
+              本期内容
+              </span>
             </div>
             {contentItems.map((item, i) => (
               <div
                 key={i}
                 style={{
                   display: "flex",
-                  alignItems: "flex-start",
-                  gap: 12,
-                  marginBottom: 14,
+                  alignItems: "center",
+                  gap: 14,
+                  marginBottom: 18,
                 }}
               >
-                <span
+                <div
                   style={{
-                    fontSize: 20,
-                    color: "#ff9d4d",
-                    lineHeight: 1.5,
+                    width: 32,
+                    height: 32,
+                    borderRadius: 8,
+                    background: "linear-gradient(135deg, #ffd700, #ffaa00)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: 18,
+                    fontWeight: 900,
+                    color: "#1a1a2e",
                     flexShrink: 0,
+                    boxShadow: "0 2px 12px rgba(255,180,0,0.5)",
+                    fontFamily: "'Nunito', 'Quicksand', 'DIN Alternate', 'Roboto Rounded', sans-serif",
                   }}
                 >
-                  ●
-                </span>
+                  {i + 1}
+                </div>
                 <span
                   style={{
-                    fontSize: 22,
-                    color: "rgba(210,218,255,0.85)",
+                    fontSize: 28,
+                    color: "#e8f0ff",
                     lineHeight: 1.5,
+                    fontWeight: 500,
+                    letterSpacing: "0.01em",
+                    fontFamily: "'Noto Serif SC', 'Source Han Serif SC', serif",
                   }}
                 >
                   {item}
@@ -356,45 +473,76 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
           {/* Bottom bar */}
           <div
             style={{
-              marginTop: "auto",
+              marginTop: -180,
               display: "flex",
               justifyContent: "space-between",
               alignItems: "flex-end",
               borderTop: "1px solid rgba(255,255,255,0.08)",
-              paddingTop: 24,
+              paddingTop: 4,
             }}
           >
-            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div
-                style={{
-                  width: 12,
-                  height: 12,
-                  borderRadius: "50%",
-                  backgroundColor: "#4ade80",
-                }}
-              />
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <div style={{
+                width: 36,
+                height: 36,
+                borderRadius: 10,
+                background: "linear-gradient(135deg, #4ade80, #22c55e)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                boxShadow: "0 4px 16px rgba(74,222,128,0.4)",
+              }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
               <span
-                style={{ fontSize: 26, fontWeight: 700, color: "#ffffff" }}
+                style={{
+                  fontSize: 36,
+                  fontWeight: 700,
+                  color: "#ffffff",
+                  letterSpacing: "0.05em",
+                }}
               >
                 {date}
               </span>
             </div>
             {meetingId && (
               <div
-                style={{ display: "flex", alignItems: "center", gap: 18 }}
+                style={{ display: "flex", alignItems: "flex-end", gap: 14 }}
               >
                 <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
-                    alignItems: "flex-end",
-                    gap: 4,
+                    alignItems: "center",
+                    gap: 6,
                   }}
                 >
                   <div
                     style={{
-                      fontSize: 20,
-                      color: "rgba(210,218,255,0.6)",
+                      width: 140,
+                      height: 140,
+                      borderRadius: 10,
+                      overflow: "hidden",
+                      background: "#ffffff",
+                      padding: 10,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <QRCodeSVG
+                      value={`https://meeting.tencent.com/dm/${meetingId.replace(/\s/g, "")}`}
+                      size={120}
+                      level="M"
+                    />
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 24,
+                      color: "rgba(210,218,255,0.7)",
                       fontWeight: 500,
                     }}
                   >
@@ -402,33 +550,14 @@ export const PosterPreview: React.FC<Props> = ({ data, scale = 0.4 }) => {
                   </div>
                   <div
                     style={{
-                      fontSize: 30,
+                      fontSize: 34,
                       fontWeight: 700,
                       color: "#ffffff",
-                      letterSpacing: "0.05em",
+                      letterSpacing: "0.08em",
                     }}
                   >
                     {meetingId}
                   </div>
-                </div>
-                <div
-                  style={{
-                    width: 120,
-                    height: 120,
-                    borderRadius: 10,
-                    overflow: "hidden",
-                    background: "#ffffff",
-                    padding: 8,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <QRCodeSVG
-                    value={`https://meeting.tencent.com/dm/${meetingId.replace(/\s/g, "")}`}
-                    size={104}
-                    level="M"
-                  />
                 </div>
               </div>
             )}
@@ -457,7 +586,8 @@ const PersonCard: React.FC<{
         height: photoSize,
         borderRadius: "50%",
         overflow: "hidden",
-        border: "3px solid rgba(255,255,255,0.15)",
+        border: "4px solid rgba(255,255,255,0.15)",
+        boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
       }}
     >
       {person.photo ? (
@@ -467,7 +597,7 @@ const PersonCard: React.FC<{
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: "center top",
+            objectPosition: "center 20%",
           }}
         />
       ) : (
@@ -494,20 +624,40 @@ const PersonCard: React.FC<{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: 4,
+        gap: 6,
       }}
     >
-      <div style={{ fontSize: 30, fontWeight: 700, color: "#ffffff" }}>
+      <div style={{
+        fontSize: 38,
+        fontWeight: 700,
+        background: "linear-gradient(90deg, #ff9d4d, #ffc87d)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
+        letterSpacing: "0.1em",
+      }}>
         {person.name}
         {person.nameCn && (
-          <span style={{ color: "#ff9d4d" }}> {person.nameCn}</span>
+          <span style={{ color: "#ffc87d" }}> {person.nameCn}</span>
         )}
       </div>
-      <div style={{ fontSize: 17, color: "rgba(210,218,255,0.65)", textAlign: "center" }}>
+      <div style={{
+        fontSize: 22,
+        color: "#d8e8ff",
+        textAlign: "center",
+        letterSpacing: "0.05em",
+        fontWeight: 500,
+      }}>
         {person.title}
       </div>
       {person.subtitle && (
-        <div style={{ fontSize: 16, color: "rgba(210,218,255,0.5)", textAlign: "center" }}>
+        <div style={{
+          fontSize: 20,
+          color: "#eef4ff",
+          textAlign: "center",
+          letterSpacing: "0.03em",
+          marginTop: 4,
+        }}>
           {person.subtitle}
         </div>
       )}
@@ -775,8 +925,8 @@ const MinimalPoster: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 position: "absolute",
                 top: 8,
                 left: 20,
-                fontSize: 56,
-                color: "rgba(100,140,200,0.2)",
+                fontSize: 64,
+                color: "rgba(100,140,200,0.18)",
                 fontFamily: "Georgia, serif",
                 lineHeight: 1,
                 fontWeight: 700,
@@ -786,10 +936,12 @@ const MinimalPoster: React.FC<Props> = ({ data, scale = 0.4 }) => {
             </span>
             <div
               style={{
-                fontSize: 30,
-                color: "#444",
-                lineHeight: 1.7,
-                fontWeight: 400,
+                fontSize: 36,
+                color: "#2d3a4a",
+                lineHeight: 1.75,
+                fontWeight: 500,
+                letterSpacing: "0.02em",
+                fontFamily: "'Noto Serif SC', 'Source Han Serif SC', Georgia, serif",
               }}
             >
               {description}
@@ -799,8 +951,8 @@ const MinimalPoster: React.FC<Props> = ({ data, scale = 0.4 }) => {
                 position: "absolute",
                 bottom: -8,
                 right: 28,
-                fontSize: 56,
-                color: "rgba(100,140,200,0.2)",
+                fontSize: 64,
+                color: "rgba(100,140,200,0.18)",
                 fontFamily: "Georgia, serif",
                 lineHeight: 1,
                 fontWeight: 700,
@@ -876,7 +1028,7 @@ const MinimalPoster: React.FC<Props> = ({ data, scale = 0.4 }) => {
           {/* Bottom bar */}
           <div
             style={{
-              marginTop: "auto",
+              marginTop: 240,
               display: "flex",
               justifyContent: "space-between",
               alignItems: "flex-end",
@@ -989,7 +1141,7 @@ const MinimalPersonCard: React.FC<{
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: "center top",
+            objectPosition: "center 20%",
           }}
         />
       ) : (
@@ -1406,7 +1558,7 @@ const GlassPoster: React.FC<Props> = ({ data, scale = 0.4 }) => {
           {/* Bottom bar */}
           <div
             style={{
-              marginTop: "auto",
+              marginTop: 240,
               display: "flex",
               justifyContent: "space-between",
               alignItems: "flex-end",
@@ -1524,7 +1676,7 @@ const GlassPersonCard: React.FC<{
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: "center top",
+            objectPosition: "center 20%",
           }}
         />
       ) : (
